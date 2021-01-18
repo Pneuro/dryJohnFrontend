@@ -5,10 +5,6 @@ function Header() {
   return (
     <div style={styles.container} class="header">
       <img src={logo} alt="Dry John Logo" style={styles.logo} />
-      <p style={styles.p}>
-        Dry John’s toilet bags are made from corn and contain natural media to
-        absorb liquids and odors. Just deposit them in the garbage! Easy!
-      </p>
     </div>
   );
 }
