@@ -5,8 +5,8 @@ function Footer() {
     <footer style={styles.container}>
       <ul style={styles.list}>
         <h2>Stores</h2>
-        <a href="https://www.amazon.com/dry-john">Amazon</a>
-        <a href="https://www.amazon.com/dry-john">Fin Feather and Fur</a>
+        <a href="https://www.amazon.com/">Amazon</a>
+        <a href="https://www.dickssportinggoods.com/">Dicks Sporting Goods</a>
       </ul>
     </footer>
   );

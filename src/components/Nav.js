@@ -4,16 +4,13 @@ import Logo from "./Images/logo.png";
 function Nav() {
   return (
     <div style={styles.container}>
-      <ul style={styles.list}>
-        <Link style={styles.item}>Login</Link>
-        <Link style={styles.item}>Register</Link>
-      </ul>
+
       <div>
         <img src={Logo} alt="dry john logo" style={styles.logo} />
       </div>
       <ul style={styles.list}>
         <Link style={styles.item}>Home</Link>
-        <Link style={styles.item}>Store</Link>
+        <Link style={styles.item}>Products</Link>
         <Link style={styles.item}>Contact</Link>
       </ul>
     </div>
