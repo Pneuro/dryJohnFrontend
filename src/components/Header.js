@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "./Assets/Images/logo.png";
-
+import Video from "./Assets/Videos/LQ_nologo.mp4";
 function Header({ setEmail, email }) {
   const onEmailChange = (e) => setEmail(e.target.value);
   const [sent, setSent] = useState(false);
@@ -20,17 +20,18 @@ function Header({ setEmail, email }) {
 
   return (
     <div className="header">
+      <video src={Video} alt="video" autoPlay muted loop style={styles.video} />
       <div style={styles.container}>
         <div style={styles.headerText}>
           <h1 style={styles.h1}>
             We only get one planet, Let's treat her with respect.
           </h1>
-          <p>
+          <p style={styles.p}>
             Dry John Toilet Bags provide a perfect resource for disposing of
             your waste in an eco-friendly manner.
           </p>
           {sent ? (
-            "Thank you for signing up, we promise not to spam you!"
+            "Thank you for signing up!"
           ) : (
             <form style={styles.form}>
               <input
@@ -61,7 +62,7 @@ const styles = {
 
     margin: "auto",
     minHeight: "80vh",
-    background: "#DBF0FF",
+    background: "#00000055",
   },
   logo: {
     zIndex: 1,
@@ -85,5 +86,11 @@ const styles = {
     height: "25px",
     border: ".5px black solid",
     borderRadius: "5px 0 0 5px",
+  },
+  video: {
+    height: "80vh",
+    zIndex: -1,
+    position: "absolute",
+    opacity: .6,
   },
 };

@@ -9,6 +9,7 @@ function Scene() {
         height=""
         style={styles.scene}
         viewBox="0 0 1922.405 1412.016"
+        className="scene"
       >
         <path
           id="Path_483"

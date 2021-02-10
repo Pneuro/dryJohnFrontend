@@ -38,3 +38,15 @@
   transition: all 1s ease;
   transform: translateY(-500px);
 }
+
+.header {
+  position: relative;
+
+  z-index: 1;
+}
+
+.scene {
+  transform: translateY(-100px);
+  position: relative;
+  z-index: 4;
+}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
@@ -11,12 +11,8 @@ function App() {
   const [email, setEmail] = useState("");
   const [reviews, setReviews] = useState([]);
 
-  const header = {
-    "content-type": "applicaton/json",
-  };
-  useEffect(() => {
-    fetch("/email", header);
-  }, []);
+  
+  
 
   return (
     <div style={styles.container} className="App">
