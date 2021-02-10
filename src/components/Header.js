@@ -77,7 +77,7 @@ const styles = {
     color: "#7fce5c",
   },
   p: {
-    color: "#333",
+    color: "#fff",
   },
   form: {
     display: "flex",

@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
 function News() {
+  const [news, setNews] = useState([
+    {
+      title: "Award winning style",
+      message:
+        "Dry John just won an award for being best in class, innovative and wonderful!",
+    },
+    {
+      title: "Friend of the planet",
+      message:
+        "Dry John just won an award for being best in class, innovative and wonderful!",
+    },
+    {
+      title: "If only animals could use it too",
+      message:
+        "Dry John just won an award for being best in class, innovative and wonderful!",
+    },
+  ]);
   return (
     <div style={styles.container}>
       <svg
@@ -18,9 +35,13 @@ function News() {
           fill="#3485bc"
         />
       </svg>
-
       <h1>Dry John News</h1>
-      s
+      {news.map((entry) => (
+        <div>
+          <h1>{entry.title}</h1>
+          <p>{entry.message}</p>
+        </div>
+      ))}
     </div>
   );
 }
@@ -33,7 +54,6 @@ const styles = {
     overflow: "hidden",
   },
   path: {
-    
     position: "relative",
     zIndex: 2,
   },
