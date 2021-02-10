@@ -1,17 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Images/logo.png";
+import Logo from "./Assets/Images/logo.png";
 function Nav() {
   return (
     <div style={styles.container}>
-
       <div>
         <img src={Logo} alt="dry john logo" style={styles.logo} />
       </div>
       <ul style={styles.list}>
-        <Link style={styles.item}>Home</Link>
-        <Link style={styles.item}>Products</Link>
-        <Link style={styles.item}>Contact</Link>
+        <Link to="/" exact style={styles.item}>
+          Home
+        </Link>
+        <Link to="/about" style={styles.item}>
+          About
+        </Link>
+        <Link to="/products" style={styles.item}>
+          Products
+        </Link>
+        <Link to="/contact" style={styles.item}>
+          Contact
+        </Link>
       </ul>
     </div>
   );
@@ -27,6 +35,8 @@ const styles = {
     color: "#3485BC",
     background: "#fff",
     minHeight: "100px",
+    position: "relative",
+    zIndex: 2,
   },
   list: {
     display: "flex",
@@ -37,8 +47,9 @@ const styles = {
     color: "#3485bc",
     textDecoration: "none",
     listStyle: "none",
+    padding: "1em",
   },
   logo: {
-    maxHeight: "100px",
+    maxHeight: "90px",
   },
 };

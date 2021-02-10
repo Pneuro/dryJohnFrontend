@@ -3,11 +3,8 @@ import React from "react";
 function Footer() {
   return (
     <footer style={styles.container}>
-      <ul style={styles.list}>
-        <h2>Stores</h2>
-        <a href="https://www.amazon.com/">Amazon</a>
-        <a href="https://www.dickssportinggoods.com/">Dicks Sporting Goods</a>
-      </ul>
+
+      <p>Copyright &copy; 2021</p>
     </footer>
   );
 }
@@ -19,7 +16,10 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     alignItems: "center",
+    margin: "auto",
     justifyContent: "center",
+    position: "relative",
+    zIndex: 1,
   },
   list: {
     display: "flex",

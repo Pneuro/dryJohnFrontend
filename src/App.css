@@ -7,10 +7,34 @@
   font-family: "Poppins", sans-serif;
 }
 
-.header {
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: calc(100vh - 100px);
+:root {
+  --fib-1: 16px;
+  --fib-2: 25.89px;
+  --fib-3: 41.89px;
+  --fib-4: 67.78px;
+
+  --yellow: #fff500;
+  --blue: #3485bc;
+  --sky: #7dcdd6;
+  --green: #8dc84a;
+}
+
+.button {
+  background: linear-gradient(
+    82deg,
+    rgba(52, 133, 188, 1) 0%,
+    rgba(141, 200, 74, 1) 100%
+  );
+  width: 250px;
+  height: 25px;
+  color: #fff;
+  font-size: var(--fib-1);
+  border: solid 1px black;
+  border-radius: 0 5px 5px 0;
+}
+
+#path_488 {
+  border: 1px solid red;
+  transition: all 1s ease;
+  transform: translateY(-500px);
 }
