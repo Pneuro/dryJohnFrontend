@@ -24,6 +24,15 @@ function App() {
           <News />
           <Reviews reviews={reviews} setReviews={setReviews} />
         </Route>
+        <Route path="/about">
+          <Nav />
+        </Route>
+        <Route path="/products">
+          <Nav />
+        </Route>
+        <Route path="/contact">
+          <Nav />
+        </Route>
       </Router>
     </div>
   );
