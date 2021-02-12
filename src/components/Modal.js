@@ -12,7 +12,7 @@ function Modal({ setEmail, setModal }) {
       </div>
       <div style={styles.container}>
         {/* form in modal to get Name, Email, Experience with Dry John products, Useful data */}
-        <h1>Sign Up!</h1>
+        <h1>Contact</h1>
         <form style={styles.form} method="POST">
           <input
             style={styles.input}
@@ -32,6 +32,7 @@ function Modal({ setEmail, setModal }) {
             type="textarea"
             onChange={onEmailChange}
           />
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
@@ -69,7 +70,12 @@ const styles = {
     display: "flex",
     flexDirection: "column",
   },
-  close: { position: "absolute", right: "20px", margin: "50px" },
+  close: {
+    position: "absolute",
+    right: "20px",
+    margin: "50px",
+    cursor: "pointer",
+  },
   line1: {
     background: "#fff",
     width: "25px",

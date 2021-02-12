@@ -5,7 +5,6 @@ import Modal from "./Modal";
 function Header({ setEmail, email }) {
   const [videoSize, setVideoSize] = useState("");
 
-  const [sent, setSent] = useState(false);
   const [modal, setModal] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +14,7 @@ function Header({ setEmail, email }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     };
-    setSent(true);
+
     fetch("/contact", header)
       .then((response) => response.json())
       .catch((err) => console.error(err.message));
@@ -38,6 +37,50 @@ function Header({ setEmail, email }) {
       setModal(false);
     }
   }
+  const styles = {
+    container: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(700px, 1fr)",
+      alignItems: "center",
+      justifyItems: "center",
+      margin: "auto",
+      minHeight: "100vh",
+      background: "#00000055",
+      width: "100%",
+    },
+    logo: {
+      zIndex: 1,
+      maxWidth: "700px",
+      position: "relative",
+    },
+    headerText: {
+      maxWidth: "600px",
+    },
+    h1: {
+      fontSize: "41.89px",
+      color: "#7fce5c",
+    },
+    p: {
+      color: "#fff",
+    },
+    form: {
+      display: "flex",
+    },
+    input: {
+      height: "25px",
+      border: ".5px black solid",
+      borderRadius: "1px",
+    },
+    video: {
+      minHeight: "100vh",
+      width: "100%",
+      zIndex: -1,
+      position: "absolute",
+      opacity: 1,
+      overflow: "hidden",
+    },
+  };
+
   return (
     <div className="header">
       <video src={Video} alt="video" autoPlay muted loop style={styles.video} />
@@ -55,7 +98,7 @@ function Header({ setEmail, email }) {
           ) : (
             <form style={styles.form}>
               <button onSubmit={openModal} type="submit" className="button">
-                Mailing List
+                Contact Us
               </button>
             </form>
           )}
@@ -68,48 +111,5 @@ function Header({ setEmail, email }) {
 }
 
 export default Header;
-const styles = {
-  container: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(700px, 1fr)",
-    alignItems: "center",
-    justifyItems: "center",
-    margin: "auto",
-    minHeight: "100vh",
-    background: "#00000055",
-    width: "100%",
-  },
-  logo: {
-    zIndex: 1,
-    maxWidth: "700px",
-    position: "relative",
-  },
-  headerText: {
-    maxWidth: "600px",
-  },
-  h1: {
-    fontSize: "41.89px",
-    color: "#7fce5c",
-  },
-  p: {
-    color: "#fff",
-  },
-  form: {
-    display: "flex",
-  },
-  input: {
-    height: "25px",
-    border: ".5px black solid",
-    borderRadius: "5px 0 0 5px",
-  },
-  video: {
-    minHeight: "100vh",
-    width: "100%",
-    zIndex: -1,
-    position: "absolute",
-    opacity: 1,
-    overflow: "hidden",
-  },
-};
 
 // if screen is less than 1758 px can I change the CSS section
