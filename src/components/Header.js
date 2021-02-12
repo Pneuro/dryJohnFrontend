@@ -1,9 +1,12 @@
 import { useState } from "react";
 import logo from "./Assets/Images/logo.png";
 import Video from "./Assets/Videos/LQ_nologo.mp4";
+import Modal from "./Modal";
 function Header({ setEmail, email }) {
-  const onEmailChange = (e) => setEmail(e.target.value);
+  const [videoSize, setVideoSize] = useState("");
+
   const [sent, setSent] = useState(false);
+  const [modal, setModal] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = [email];
@@ -18,6 +21,23 @@ function Header({ setEmail, email }) {
       .catch((err) => console.error(err.message));
   };
 
+  const sizeChange = () => {
+    if (window.innerWidth < 1758) {
+      setVideoSize("30px");
+    } else {
+      setVideoSize("50px");
+    }
+  };
+  function openModal(e) {
+    e.preventDefault();
+    if (!modal) {
+      console.log(modal);
+      setModal(true);
+    } else {
+      console.log(modal);
+      setModal(false);
+    }
+  }
   return (
     <div className="header">
       <video src={Video} alt="video" autoPlay muted loop style={styles.video} />
@@ -30,16 +50,11 @@ function Header({ setEmail, email }) {
             Dry John Toilet Bags provide a perfect resource for disposing of
             your waste in an eco-friendly manner.
           </p>
-          {sent ? (
-            "Thank you for signing up!"
+          {modal ? (
+            <Modal setEmail={setEmail} setModal={setModal} />
           ) : (
             <form style={styles.form}>
-              <input
-                style={styles.input}
-                placeholder="Email Address"
-                onChange={onEmailChange}
-              />
-              <button onSubmit={handleSubmit} type="submit" className="button">
+              <button onSubmit={openModal} type="submit" className="button">
                 Mailing List
               </button>
             </form>
@@ -59,10 +74,10 @@ const styles = {
     gridTemplateColumns: "repeat(auto-fit, minmax(700px, 1fr)",
     alignItems: "center",
     justifyItems: "center",
-
     margin: "auto",
-    minHeight: "80vh",
+    minHeight: "100vh",
     background: "#00000055",
+    width: "100%",
   },
   logo: {
     zIndex: 1,
@@ -88,9 +103,13 @@ const styles = {
     borderRadius: "5px 0 0 5px",
   },
   video: {
-    height: "80vh",
+    minHeight: "100vh",
+    width: "100%",
     zIndex: -1,
     position: "absolute",
-    opacity: .6,
+    opacity: 1,
+    overflow: "hidden",
   },
 };
+
+// if screen is less than 1758 px can I change the CSS section

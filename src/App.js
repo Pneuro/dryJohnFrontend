@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
-import Reviews from "./components/Reviews";
+import Reviews from "./components/Testimonials";
 import Scene from "./components/Scene";
 import News from "./components/News";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
   // api to Dry John backend.
   const [email, setEmail] = useState("");
@@ -22,7 +25,10 @@ function App() {
           <Header email={email} setEmail={setEmail} />
           <Scene />
           <News />
+          <About />
           <Reviews reviews={reviews} setReviews={setReviews} />
+          <Contact />
+          <Footer />
         </Route>
         <Route path="/about">
           <Nav />
@@ -32,6 +38,7 @@ function App() {
         </Route>
         <Route path="/contact">
           <Nav />
+
         </Route>
       </Router>
     </div>

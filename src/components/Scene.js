@@ -602,6 +602,9 @@ export default Scene;
 const styles = {
   scene: {
     position: "relative",
-    zIndex: 0,
+    zIndex: 1,
+    transform: "translateY(-280px)",
+    overflow: "hidden",
+    width: "100%",
   },
 };
