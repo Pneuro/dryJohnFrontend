@@ -98,6 +98,9 @@ const styles = {
   wrapper: {
     backgroundColor: "#8DC84A",
     color: "#fff",
+    position: 'relative',
+    zIndex: 1,
+    marginTop: '500px',
   },
   title: {
     textAlign: "center",

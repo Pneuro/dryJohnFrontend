@@ -25,6 +25,9 @@ function News() {
     container: {
       color: "#fff",
       backgroundColor: "#3485BC",
+      position: "relative",
+      zIndex: 1,
+      marginTop: "500px",
     },
     title: {
       textAlign: "center",

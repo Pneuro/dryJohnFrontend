@@ -16,6 +16,59 @@ function Modal({ setEmail, setModal }) {
   useEffect(() => {
     fetch("/mailinglist", headers).then((res) => console.log(res));
   });
+  const styles = {
+    wrapper: {
+      position: "absolute",
+      background: "#222d",
+      color: "#fff",
+      zIndex: 4,
+      width: "100%",
+      height: "100%",
+      top: 0,
+      right: 0,
+      left: 0,
+      bottom: 0,
+    },
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      height: "100%",
+    },
+    input: {
+      height: "25px",
+      border: ".5px black solid",
+      borderRadius: "5px",
+      width: "350px",
+      marginTop: "10px;",
+    },
+    form: {
+      display: "flex",
+      flexDirection: "column",
+    },
+    close: {
+      position: "absolute",
+      right: "20px",
+      margin: "50px",
+      cursor: "pointer",
+    },
+    line1: {
+      background: "#fff",
+      width: "25px",
+      height: "3px",
+      margin: "3px",
+      transform: "rotate(-45deg) translateY(4px)",
+    },
+    line2: {
+      background: "#fff",
+      width: "25px",
+      height: "3px",
+      margin: "3px",
+      transform: "rotate(45deg)translateY(-4px)",
+    },
+  };
+
   return (
     <div style={styles.wrapper}>
       <div onClick={() => setModal(false)} style={styles.close}>
@@ -52,54 +105,3 @@ function Modal({ setEmail, setModal }) {
 }
 
 export default Modal;
-const styles = {
-  wrapper: {
-    position: "absolute",
-    background: "#222d",
-    color: "#fff",
-    zIndex: 4,
-    width: "100%",
-    height: "100%",
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-  },
-  container: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    height: "100%",
-  },
-  input: {
-    height: "25px",
-    border: ".5px black solid",
-    borderRadius: "5px",
-    width: "350px",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  close: {
-    position: "absolute",
-    right: "20px",
-    margin: "50px",
-    cursor: "pointer",
-  },
-  line1: {
-    background: "#fff",
-    width: "25px",
-    height: "3px",
-    margin: "3px",
-    transform: "rotate(-45deg) translateY(4px)",
-  },
-  line2: {
-    background: "#fff",
-    width: "25px",
-    height: "3px",
-    margin: "3px",
-    transform: "rotate(45deg)translateY(-4px)",
-  },
-};

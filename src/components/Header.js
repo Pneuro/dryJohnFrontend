@@ -2,9 +2,8 @@ import { useState } from "react";
 import logo from "./Assets/Images/logo.png";
 import Video from "./Assets/Videos/LQ_nologo.mp4";
 import Modal from "./Modal";
+import { Link } from "react-router-dom";
 function Header({ setEmail, email }) {
-  
-
   const [modal, setModal] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +21,7 @@ function Header({ setEmail, email }) {
 
   function openModal(e) {
     e.preventDefault();
-    if (modal) {
+    if (!modal) {
       setModal(true);
     } else {
       console.log(modal);
@@ -42,7 +41,7 @@ function Header({ setEmail, email }) {
     },
     logo: {
       zIndex: 1,
-      maxWidth: "700px",
+      maxWidth: "80vw",
       position: "relative",
     },
     headerText: {
@@ -57,6 +56,11 @@ function Header({ setEmail, email }) {
     },
     form: {
       display: "flex",
+      marginTop: "5px",
+    },
+    link: {
+      color: "#fff",
+      textDecoration: "none",
     },
     input: {
       height: "25px",
@@ -64,12 +68,13 @@ function Header({ setEmail, email }) {
       borderRadius: "1px",
     },
     video: {
-      minHeight: "100vh",
-      width: "100%",
+      height: '100%',
+      width: 'auto',
       zIndex: -1,
-      position: "absolute",
+      position: "fixed",
       opacity: 1,
       overflow: "hidden",
+      margin: 'auto',
     },
   };
 
@@ -86,14 +91,21 @@ function Header({ setEmail, email }) {
             your waste in an eco-friendly manner.
           </p>
           {!modal ? (
-            <form style={styles.form} onSubmit={handleSubmit}>
-              <button onSubmit={openModal} type="submit" className="button">
+            <form style={styles.form} onSubmit={openModal}>
+              <button type="submit" className="button">
                 Contact Us
               </button>
             </form>
           ) : (
             <Modal setEmail={setEmail} setModal={setModal} />
           )}
+          <form style={styles.form}>
+            <button type="submit" className="button">
+              <Link style={styles.link} to="/order">
+                Order Now
+              </Link>
+            </button>
+          </form>
         </div>
 
         <img src={logo} alt="Dry John Logo" style={styles.logo} />

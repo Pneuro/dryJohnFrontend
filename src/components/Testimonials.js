@@ -65,6 +65,9 @@ const styles = {
     backgroundColor: "#517A21",
     color: "#8DC84A",
     minHeight: "40vh",
+    position: "relative",
+    zIndex: 1,
+    marginTop: "500px",
   },
   container: {
     overflow: "hidden",

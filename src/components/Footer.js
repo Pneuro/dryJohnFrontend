@@ -41,6 +41,10 @@ const styles = {
     justifyContent: "center",
     position: "relative",
     zIndex: 1,
+    background: "linear-gradient(90deg, #fffa, #333a)",
+    border: "#fff 1px solid",
+    borderRadius: "10px 10px 0 0",
+    width: "80vw",
   },
   list: {
     display: "flex",

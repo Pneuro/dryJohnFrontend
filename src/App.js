@@ -10,6 +10,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
+import OrderNow from "./components/OrderNow";
 function App() {
   // api to Dry John backend.
   const [email, setEmail] = useState("");
@@ -42,6 +43,9 @@ function App() {
         {/* Auth Provider */}
         <Route path="/admin/login">
           {!loggedIn ? <Login loggedIn setLoggedIn={setLoggedIn} /> : ""}
+        </Route>
+        <Route path="/order">
+          <OrderNow />
         </Route>
       </Router>
     </div>

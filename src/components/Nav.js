@@ -21,7 +21,6 @@ function Nav() {
           Contact
         </Link>
       </ul>
-      
     </div>
   );
 }
@@ -36,7 +35,8 @@ const styles = {
     color: "#3485BC",
     background: "#fff",
     minHeight: "100px",
-    position: "relative",
+    position: "fixed",
+    width: "100vw",
     zIndex: 2,
   },
   list: {
