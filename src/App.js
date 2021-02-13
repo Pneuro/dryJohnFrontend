@@ -9,14 +9,12 @@ import News from "./components/News";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Login from "./pages/Login";
 function App() {
   // api to Dry John backend.
   const [email, setEmail] = useState("");
   const [reviews, setReviews] = useState([]);
-
-  
-  
-
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <div style={styles.container} className="App">
       <Router>
@@ -38,7 +36,12 @@ function App() {
         </Route>
         <Route path="/contact">
           <Nav />
+        </Route>
 
+        {/* Administration */}
+        {/* Auth Provider */}
+        <Route path="/admin/login">
+          {!loggedIn ? <Login loggedIn setLoggedIn={setLoggedIn} /> : ""}
         </Route>
       </Router>
     </div>
@@ -49,6 +52,6 @@ export default App;
 
 const styles = {
   container: {
-    backgroundColor: "#dbf0ff",
+    backgroundColor: "#8dc84a",
   },
 };

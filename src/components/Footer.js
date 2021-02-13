@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "./Assets/Images/logo.png";
 
 function Footer() {
@@ -20,7 +20,9 @@ function Footer() {
         </ul>
         <ul>
           <h3>Administration</h3>
-          <li>Information</li>
+          <Link to="/admin/login" exact style={styles.item}>
+            Login
+          </Link>
         </ul>
       </div>
       <p>Copyright &copy; 2021</p>

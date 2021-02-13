@@ -3,7 +3,7 @@ import logo from "./Assets/Images/logo.png";
 import Video from "./Assets/Videos/LQ_nologo.mp4";
 import Modal from "./Modal";
 function Header({ setEmail, email }) {
-  const [videoSize, setVideoSize] = useState("");
+  
 
   const [modal, setModal] = useState(false);
   const handleSubmit = (e) => {
@@ -20,17 +20,9 @@ function Header({ setEmail, email }) {
       .catch((err) => console.error(err.message));
   };
 
-  const sizeChange = () => {
-    if (window.innerWidth < 1758) {
-      setVideoSize("30px");
-    } else {
-      setVideoSize("50px");
-    }
-  };
   function openModal(e) {
     e.preventDefault();
-    if (!modal) {
-      console.log(modal);
+    if (modal) {
       setModal(true);
     } else {
       console.log(modal);
@@ -93,14 +85,14 @@ function Header({ setEmail, email }) {
             Dry John Toilet Bags provide a perfect resource for disposing of
             your waste in an eco-friendly manner.
           </p>
-          {modal ? (
-            <Modal setEmail={setEmail} setModal={setModal} />
-          ) : (
-            <form style={styles.form}>
+          {!modal ? (
+            <form style={styles.form} onSubmit={handleSubmit}>
               <button onSubmit={openModal} type="submit" className="button">
                 Contact Us
               </button>
             </form>
+          ) : (
+            <Modal setEmail={setEmail} setModal={setModal} />
           )}
         </div>
 

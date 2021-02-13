@@ -1,9 +1,21 @@
-import React from "react";
+import { useEffect } from "react";
 
 function Modal({ setEmail, setModal }) {
   const onNameChange = (e) => console.log(e.target.value);
   const onEmailChange = (e) => setEmail(e.target.value);
+  const headers = {
+    header: {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+
+      "Content-Type": "application/json",
+    },
+  };
   // Send POST request to backend to add data to database
+  useEffect(() => {
+    fetch("/mailinglist", headers).then((res) => console.log(res));
+  });
   return (
     <div style={styles.wrapper}>
       <div onClick={() => setModal(false)} style={styles.close}>

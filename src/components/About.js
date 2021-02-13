@@ -61,7 +61,7 @@ function About() {
       </svg>
 
       <div style={styles.container}>
-        <img src={Pete} alt="Pete Phinney Image" style={styles.image} />
+        <img src={Pete} alt="Pete Phinney himself" style={styles.image} />
         <div style={styles.text}>
           <p>Pete Phinney</p>
           <p>Product Designer / CEO at Dry John</p>
