@@ -31,27 +31,31 @@ function Header({ setEmail, email }) {
   const styles = {
     container: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(700px, 1fr)",
+      gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr)",
       alignItems: "center",
       justifyItems: "center",
       margin: "auto",
-      minHeight: "100vh",
-      background: "#00000055",
-      width: "100%",
+      paddingTop: "200px",
     },
     logo: {
       zIndex: 1,
-      maxWidth: "80vw",
+      maxWidth: "calc(40vw)",
       position: "relative",
+      minWidth: "300px",
     },
     headerText: {
       maxWidth: "600px",
+      background: "#3339",
+      padding: "1em",
+      borderRadius: "5px",
     },
     h1: {
       fontSize: "41.89px",
       color: "#7fce5c",
+      maxWidth: "80vw",
     },
     p: {
+      maxWidth: "80vw",
       color: "#fff",
     },
     form: {
@@ -68,20 +72,30 @@ function Header({ setEmail, email }) {
       borderRadius: "1px",
     },
     video: {
-      height: '100%',
-      width: 'auto',
+      minHeight: "100vh",
+      minWidth: '100%',
       zIndex: -1,
       position: "fixed",
       opacity: 1,
       overflow: "hidden",
-      margin: 'auto',
+      margin: "auto",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
     },
   };
 
   return (
     <div className="header">
-      <video src={Video} alt="video" autoPlay muted loop style={styles.video} />
       <div style={styles.container}>
+        <video
+          src={Video}
+          alt="video"
+          autoPlay
+          muted
+          loop
+          style={styles.video}
+        />
         <div style={styles.headerText}>
           <h1 style={styles.h1}>
             We only get one planet, Let's treat her with respect.

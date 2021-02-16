@@ -67,7 +67,9 @@ const styles = {
     minHeight: "40vh",
     position: "relative",
     zIndex: 1,
-    marginTop: "500px",
+
+    margin: "250px 0",
+    padding: "1em",
   },
   container: {
     overflow: "hidden",

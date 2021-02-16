@@ -27,7 +27,13 @@ function News() {
       backgroundColor: "#3485BC",
       position: "relative",
       zIndex: 1,
-      marginTop: "500px",
+      margin: "250px 0 ",
+      padding: "1em",
+      minHeight: "80vh",
+      display: "flex",
+      flexDirection: "column",
+
+      justifyContent: "center",
     },
     title: {
       textAlign: "center",
@@ -37,6 +43,8 @@ function News() {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(370px, 1fr))",
       padding: "1em",
+      margin: "1em",
+      fontSize: "16px",
     },
     path: {
       position: "relative",

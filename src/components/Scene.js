@@ -603,7 +603,7 @@ const styles = {
   scene: {
     position: "relative",
     zIndex: 1,
-    transform: "translateY(-280px)",
+    
     overflow: "hidden",
     width: "100%",
   },

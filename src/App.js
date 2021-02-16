@@ -35,10 +35,7 @@ function App() {
         <Route path="/products">
           <Nav />
         </Route>
-        <Route path="/contact">
-          <Nav />
-        </Route>
-
+        
         {/* Administration */}
         {/* Auth Provider */}
         <Route path="/admin/login">

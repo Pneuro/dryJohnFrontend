@@ -20,6 +20,47 @@ function Contact() {
       .then((response) => response.json())
       .catch((err) => console.error(err.message));
   };
+
+  const styles = {
+    wrapper: {
+      backgroundColor: "#3485BC",
+      color: "#fff",
+      position: "relative",
+      zIndex: "1",
+      padding: "8em 0 8em 0",
+    },
+    container: {
+      padding: "5em",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center"
+    },
+    form: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    inputTop: {
+      borderRadius: "5px 5px 0 0",
+      borderBottom: ".5px solid #333",
+      border: "1px",
+    },
+    inputBottom: {
+      borderTop: ".5px solid #333",
+      borderRadius: "0 0 5px 5px",
+      border: "1px",
+    },
+    button: {
+      background:
+        "linear-gradient(82deg, rgba(141,200,74,1) 0%, rgba(52,133,188,1) 100%)",
+      border: "none",
+      padding: "4px 0",
+      width: "211px",
+      borderRadius: "5px",
+    },
+  };
+
   return (
     <div style={styles.wrapper}>
       <div style={styles.container}>
@@ -68,37 +109,3 @@ function Contact() {
 }
 
 export default Contact;
-
-const styles = {
-  wrapper: {
-    backgroundColor: "#3485BC",
-    color: "#fff",
-  },
-  container: {
-    padding: "5em",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  inputTop: {
-    borderRadius: "5px 5px 0 0",
-    borderBottom: ".5px solid #333",
-    border: "1px",
-  },
-  inputBottom: {
-    borderTop: ".5px solid #333",
-    borderRadius: "0 0 5px 5px",
-    border: "1px",
-  },
-  button: {
-    background:
-      "linear-gradient(82deg, rgba(141,200,74,1) 0%, rgba(52,133,188,1) 100%)",
-    border: "none",
-    padding: "4px 0",
-    width: "211px",
-    borderRadius: "5px",
-  },
-};

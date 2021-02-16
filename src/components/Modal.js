@@ -49,9 +49,11 @@ function Modal({ setEmail, setModal }) {
     },
     close: {
       position: "absolute",
-      right: "20px",
+      top: "200px",
+      right: "200px",
       margin: "50px",
       cursor: "pointer",
+      zIndex: 50,
     },
     line1: {
       background: "#fff",
@@ -76,7 +78,6 @@ function Modal({ setEmail, setModal }) {
         <div style={styles.line2}></div>
       </div>
       <div style={styles.container}>
-        {/* form in modal to get Name, Email, Experience with Dry John products, Useful data */}
         <h1>Contact</h1>
         <form style={styles.form} method="POST">
           <input

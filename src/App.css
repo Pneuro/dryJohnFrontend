@@ -33,20 +33,12 @@
   border-radius: 5px;
 }
 
-#path_488 {
-  border: 1px solid red;
-  transition: all 1s ease;
-  transform: translateY(-500px);
-}
-
 .header {
   position: relative;
-
   z-index: 1;
 }
 
 .scene {
-  transform: translateY(-100px);
   position: relative;
   z-index: 4;
 }
