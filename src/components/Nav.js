@@ -45,7 +45,7 @@ const styles = {
     justifyContent: "space-around",
     alignItems: "center",
     color: "#3485BC",
-    background: "#fffc",
+    background: "#fff",
     minHeight: "100px",
     position: "fixed",
     top: "0",
