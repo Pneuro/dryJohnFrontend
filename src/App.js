@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Reviews from "./components/Testimonials";
 import Scene from "./components/Scene";
 import News from "./components/News";
-import About from "./pages/AboutPage";
+import About from "./components/AboutPage";
 
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
