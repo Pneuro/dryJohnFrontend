@@ -27,7 +27,7 @@ function News() {
       backgroundColor: "#3485BC",
       position: "relative",
       zIndex: 1,
-      margin: "250px 0 ",
+      
       padding: "1em",
       minHeight: "80vh",
       display: "flex",

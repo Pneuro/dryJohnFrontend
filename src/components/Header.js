@@ -73,7 +73,7 @@ function Header({ setEmail, email }) {
     },
     video: {
       minHeight: "100vh",
-      minWidth: '100%',
+      backgroundSize: "cover",
       zIndex: -1,
       position: "fixed",
       opacity: 1,

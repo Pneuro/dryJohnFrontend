@@ -68,7 +68,7 @@ const styles = {
     position: "relative",
     zIndex: 1,
 
-    margin: "250px 0",
+    
     padding: "1em",
   },
   container: {

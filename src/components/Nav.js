@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import Logo from "./Assets/Images/logo.png";
 import Burger from "./Burger";
+import NavLinks from "./NavLinks";
 function Nav() {
   const [mobile, setMobile] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [fontSize, setFontSize] = useState("");
   useEffect(() => {
     if (window.innerWidth < 500) {
       setMobile(true);
     } else {
       setMobile(false);
     }
-  });
+  }, [mobile]);
 
   return (
     <div style={styles.container}>
@@ -20,18 +22,10 @@ function Nav() {
       </div>
       {!mobile ? (
         <ul style={styles.list}>
-          <Link to="/" exact style={styles.item}>
-            Home
-          </Link>
-          <Link to="/about" style={styles.item}>
-            About
-          </Link>
-          <Link to="/products" style={styles.item}>
-            Products
-          </Link>
+          <NavLinks fontSize={fontSize} setFontSize={setFontSize} />
         </ul>
       ) : (
-        <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
+        <Burger navOpen={navOpen} setNavOpen={setNavOpen} mobile={mobile} />
       )}
     </div>
   );
@@ -47,7 +41,7 @@ const styles = {
     color: "#3485BC",
     background: "#fff",
     minHeight: "100px",
-    position: "fixed",
+    position: "sticky",
     top: "0",
     width: "100vw",
     zIndex: 2,
@@ -55,14 +49,9 @@ const styles = {
   list: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr)",
-    width: '500px',
+    width: "500px",
   },
-  item: {
-    color: "#3485bc",
-    textDecoration: "none",
-    listStyle: "none",
-    padding: "1em",
-  },
+
   logo: {
     maxHeight: "90px",
   },

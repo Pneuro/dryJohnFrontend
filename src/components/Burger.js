@@ -1,4 +1,5 @@
 import React from "react";
+import NavLinks from "./NavLinks";
 
 function Burger({ navOpen, setNavOpen }) {
   const styles = {
@@ -20,6 +21,8 @@ function Burger({ navOpen, setNavOpen }) {
       backgroundColor: "#3485bc",
       margin: "3px",
       transition: ".3 ease all",
+      position: "relative",
+      zIndex: 5,
     },
     line2: {
       width: "25px",
@@ -27,6 +30,8 @@ function Burger({ navOpen, setNavOpen }) {
       backgroundColor: "#3485bc",
       margin: "3px",
       transition: ".3 ease all",
+      position: "relative",
+      zIndex: 5,
     },
     line3: {
       width: "25px",
@@ -34,6 +39,8 @@ function Burger({ navOpen, setNavOpen }) {
       backgroundColor: "#3485bc",
       margin: "3px",
       transition: ".3 ease all",
+      position: "relative",
+      zIndex: 5,
     },
     line1Open: {
       width: "25px",
@@ -72,8 +79,9 @@ function Burger({ navOpen, setNavOpen }) {
           <div style={styles.line1Open}></div>
           <div style={styles.line2Open}></div>
           <div style={styles.line3Open}></div>
-                  </div>
-                  
+
+          <NavLinks />
+        </div>
       )}
     </div>
   );

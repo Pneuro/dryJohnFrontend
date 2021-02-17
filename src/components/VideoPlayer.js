@@ -20,6 +20,6 @@ export default VideoPlayer;
 
 const styles = {
   container: {
-    maxWidth: "90vw",
+    overflow: "hidden",
   },
 };

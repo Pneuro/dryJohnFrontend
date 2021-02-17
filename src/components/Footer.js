@@ -38,6 +38,7 @@ const styles = {
     gridTemplateColumns: "1fr 1fr",
     alignItems: "center",
     margin: "auto",
+    marginTop: "500px",
     justifyContent: "center",
     position: "relative",
     zIndex: 1,

@@ -6,11 +6,13 @@ import Header from "./components/Header";
 import Reviews from "./components/Testimonials";
 import Scene from "./components/Scene";
 import News from "./components/News";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import About from "./pages/AboutPage";
+
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
+import Images from "./components/Images";
+
 function App() {
   // api to Dry John backend.
   const [email, setEmail] = useState("");
@@ -26,16 +28,16 @@ function App() {
           <News />
           <About />
           <Reviews reviews={reviews} setReviews={setReviews} />
-          <Contact />
+          <Images />
           <Footer />
         </Route>
         <Route path="/about">
-          <Nav />
+          <About />
         </Route>
         <Route path="/products">
           <Nav />
         </Route>
-        
+
         {/* Administration */}
         {/* Auth Provider */}
         <Route path="/admin/login">

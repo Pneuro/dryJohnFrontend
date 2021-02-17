@@ -100,7 +100,7 @@ const styles = {
     color: "#fff",
     position: 'relative',
     zIndex: 1,
-    marginTop: '500px',
+    
   },
   title: {
     textAlign: "center",
