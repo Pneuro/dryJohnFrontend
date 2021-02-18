@@ -17,7 +17,7 @@ function App() {
   // api to Dry John backend.
   const [email, setEmail] = useState("");
   const [reviews, setReviews] = useState([]);
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState("Pete");
 
   return (

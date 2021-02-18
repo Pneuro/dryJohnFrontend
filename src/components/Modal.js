@@ -15,7 +15,7 @@ function Modal({ setEmail, setModal }) {
   // Send POST request to backend to add data to database
   useEffect(() => {
     fetch("/mailinglist", headers).then((res) => console.log(res));
-  });
+  }, []);
   const styles = {
     wrapper: {
       position: "absolute",

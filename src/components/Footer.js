@@ -68,7 +68,7 @@ const styles = {
   listItem: {},
   list: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
   },
   logo: {
     maxWidth: "50%",

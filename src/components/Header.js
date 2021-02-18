@@ -36,7 +36,7 @@ function Header({ setEmail, email }) {
     {
       mobile ? setVid("100vh") : setVid("100vw");
     }
-  });
+  }, []);
 
   function openModal(e) {
     e.preventDefault();

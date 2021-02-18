@@ -18,26 +18,26 @@ export default function SlideShow({
     setThumnails(images);
     setCurrentSlideStyle({
       backgroundImage: "url('" + images[currentSlide] + "')",
-    });
+    }, []);
 
     if (currentSlide > 0) {
       setPreviousSlideStyle({
         backgroundImage: "url('" + images[currentSlide - 1] + "')",
-      });
+      }, []);
     } else {
       setPreviousSlideStyle({
         backgroundImage: "url('" + images[images.length - 1] + "')",
-      });
+      }, []);
     }
 
     if (currentSlide === images.length - 1) {
       setNextSlideStyle({
         backgroundImage: "url('" + images[0] + "')",
-      });
+      }, []);
     } else {
       setNextSlideStyle({
         backgroundImage: "url('" + images[currentSlide + 1] + "')",
-      });
+      }, []);
     }
 
     const loop = setInterval(() => {
