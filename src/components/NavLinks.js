@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
   const styles = {
@@ -28,7 +29,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       {!mobile && !navOpen ? (
         <>
           <Link to="/" exact style={styles.item}>
-            Home
+            Homes
           </Link>
           <Link to="/about" style={styles.item}>
             About

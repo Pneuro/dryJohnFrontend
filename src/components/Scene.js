@@ -7,8 +7,8 @@ function Scene() {
         xmlns="http://www.w3.org/2000/svg"
         width="100vw"
         height=""
-        animate={{ y: [100, 0] }}
-        transition={{ duration: 2, y: { type: "spring", stiffness: 100 } }}
+        animate={{ y: [400, 10] }}
+        transition={{ duration: .3, delay: 1.5 }}
         style={styles.scene}
         viewBox="0 0 1922.405 1412.016"
         className="scene"

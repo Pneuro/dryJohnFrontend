@@ -118,14 +118,14 @@ function Header({ setEmail, email }) {
         <div style={styles.headerText}>
           <motion.h1
             animate={{ y: [40, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3, delay: 0 }}
             style={styles.h1}
           >
             We only get one planet, Let's treat her with respect.
           </motion.h1>
           <motion.p
             animate={{ y: [40, 0], opacity: [0, 1] }}
-            transition={{ duration: .3 }}
+            transition={{ duration: 0.3, delay: .3 }}
             style={styles.p}
           >
             Dry John Toilet Bags provide a perfect resource for disposing of
@@ -135,7 +135,7 @@ function Header({ setEmail, email }) {
             <form style={styles.form} onSubmit={openModal}>
               <motion.button
                 animate={{ y: [40, 0], opacity: [0, 1] }}
-                transition={{ duration: .5 }}
+                transition={{ duration: 0.3, delay: .6 }}
                 type="submit"
                 className="button"
               >
@@ -148,8 +148,7 @@ function Header({ setEmail, email }) {
           <form style={styles.form}>
             <motion.button
               animate={{ y: [50, 0], opacity: [0, 1] }}
-              transition={{ duration: .7}}
-              whileHover={{}}
+              transition={{ duration: 0.3, delay: .9 }}
               type="submit"
               className="button"
             >
@@ -162,7 +161,7 @@ function Header({ setEmail, email }) {
 
         <motion.img
           animate={{ y: [100, 0], opacity: [0, 1], rotate: [1800, 0] }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.3, delay: 1.2 }}
           src={logo}
           alt="Dry John Logo"
           style={styles.logo}
