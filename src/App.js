@@ -11,13 +11,15 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
-
+import BackendPage from "./pages/BackendPage";
 
 function App() {
   // api to Dry John backend.
   const [email, setEmail] = useState("");
   const [reviews, setReviews] = useState([]);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
+  const [user, setUser] = useState("Pete");
+
   return (
     <div style={styles.container} className="App">
       <Router>
@@ -37,10 +39,14 @@ function App() {
         <Route path="/products">
           <Nav />
         </Route>
-      {/* Administration */}
-      {/* Auth Provider */}
+        {/* Administration */}
+        {/* Auth Provider */}
         <Route path="/admin/login">
-          {!loggedIn ? <Login loggedIn setLoggedIn={setLoggedIn} /> : ""}
+          {!loggedIn ? (
+            <Login loggedIn setLoggedIn={setLoggedIn} />
+          ) : (
+            <BackendPage user={user} />
+          )}
         </Route>
         <Route path="/order">
           <OrderNow />

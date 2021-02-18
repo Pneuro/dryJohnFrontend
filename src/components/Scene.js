@@ -1,12 +1,14 @@
-import React from "react";
+import { motion } from "framer-motion";
 
 function Scene() {
   return (
     <>
-      <svg
+      <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         width="100vw"
         height=""
+        animate={{ y: [100, 0] }}
+        transition={{ duration: 2, y: { type: "spring", stiffness: 100 } }}
         style={styles.scene}
         viewBox="0 0 1922.405 1412.016"
         className="scene"
@@ -579,7 +581,7 @@ function Scene() {
           d="M5100.285-1243.172s-3.924-8.417-5.3-9.852-1.753-.211-2.027-.781.647-.8,2.027-3.218,4.361-8.832,5.3-9.127-2.316,7.1,0,9.127a8.958,8.958,0,0,0,3.31,1.646c1.659.613-.652.234-.652.83,0,1-.341-.3-2.658,1.523S5100.285-1243.172,5100.285-1243.172Z"
           transform="translate(-4090.52 1318.263)"
         />
-        <path
+        <motion.path
           id="Path_519"
           data-name="Path 519"
           d="M5100.285-1243.172s-3.924-8.417-5.3-9.852-1.753-.211-2.027-.781.647-.8,2.027-3.218,4.361-8.832,5.3-9.127-2.316,7.1,0,9.127a8.958,8.958,0,0,0,3.31,1.646c1.659.613-.652.234-.652.83,0,1-.341-.3-2.658,1.523S5100.285-1243.172,5100.285-1243.172Z"
@@ -592,7 +594,7 @@ function Scene() {
           transform="translate(-4073.275 1454.707)"
           fill="#41621a"
         />
-      </svg>
+      </motion.svg>
     </>
   );
 }
@@ -603,7 +605,7 @@ const styles = {
   scene: {
     position: "relative",
     zIndex: 1,
-    
+
     overflow: "hidden",
     width: "100%",
   },

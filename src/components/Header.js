@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion, useCycle } from "framer-motion";
 import logo from "./Assets/Images/logo.png";
 import Video from "./Assets/Videos/LQ_nologo.mp4";
 import Modal from "./Modal";
@@ -6,6 +7,7 @@ import { Link } from "react-router-dom";
 function Header({ setEmail, email }) {
   const [modal, setModal] = useState(false);
   const [vid, setVid] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = [email];
@@ -114,32 +116,57 @@ function Header({ setEmail, email }) {
           style={styles.video}
         />
         <div style={styles.headerText}>
-          <h1 style={styles.h1}>
+          <motion.h1
+            animate={{ y: [40, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.3 }}
+            style={styles.h1}
+          >
             We only get one planet, Let's treat her with respect.
-          </h1>
-          <p style={styles.p}>
+          </motion.h1>
+          <motion.p
+            animate={{ y: [40, 0], opacity: [0, 1] }}
+            transition={{ duration: .3 }}
+            style={styles.p}
+          >
             Dry John Toilet Bags provide a perfect resource for disposing of
             your waste in an eco-friendly manner.
-          </p>
+          </motion.p>
           {!modal ? (
             <form style={styles.form} onSubmit={openModal}>
-              <button type="submit" className="button">
+              <motion.button
+                animate={{ y: [40, 0], opacity: [0, 1] }}
+                transition={{ duration: .5 }}
+                type="submit"
+                className="button"
+              >
                 Contact Us
-              </button>
+              </motion.button>
             </form>
           ) : (
             <Modal setEmail={setEmail} setModal={setModal} />
           )}
           <form style={styles.form}>
-            <button type="submit" className="button">
+            <motion.button
+              animate={{ y: [50, 0], opacity: [0, 1] }}
+              transition={{ duration: .7}}
+              whileHover={{}}
+              type="submit"
+              className="button"
+            >
               <Link style={styles.link} to="/order">
                 Order Now
               </Link>
-            </button>
+            </motion.button>
           </form>
         </div>
 
-        <img src={logo} alt="Dry John Logo" style={styles.logo} />
+        <motion.img
+          animate={{ y: [100, 0], opacity: [0, 1], rotate: [1800, 0] }}
+          transition={{ duration: 1.2 }}
+          src={logo}
+          alt="Dry John Logo"
+          style={styles.logo}
+        />
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ function AboutHeader() {
       alignItems: "center",
       justifyContent: "center",
       background: "#DBF0FF",
+      marginTop: "50px",
     },
     greeting: {
       maxWidth: "35vw",
