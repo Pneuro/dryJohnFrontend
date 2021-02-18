@@ -98,9 +98,8 @@ const styles = {
   wrapper: {
     backgroundColor: "#8DC84A",
     color: "#fff",
-    position: 'relative',
+    position: "relative",
     zIndex: 1,
-    
   },
   title: {
     textAlign: "center",
@@ -123,5 +122,6 @@ const styles = {
   },
   image: {
     maxWidth: "80vw",
+    justifySelf: "center",
   },
 };

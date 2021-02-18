@@ -6,12 +6,12 @@ import Header from "./components/Header";
 import Reviews from "./components/Testimonials";
 import Scene from "./components/Scene";
 import News from "./components/News";
-import About from "./components/AboutPage";
-
+import AboutPage from "./pages/AboutPage";
+import About from "./components/About";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
-import Images from "./components/Images";
+
 
 function App() {
   // api to Dry John backend.
@@ -28,18 +28,17 @@ function App() {
           <News />
           <About />
           <Reviews reviews={reviews} setReviews={setReviews} />
-          <Images />
+
           <Footer />
         </Route>
         <Route path="/about">
-          <About />
+          <AboutPage />
         </Route>
         <Route path="/products">
           <Nav />
         </Route>
-
-        {/* Administration */}
-        {/* Auth Provider */}
+      {/* Administration */}
+      {/* Auth Provider */}
         <Route path="/admin/login">
           {!loggedIn ? <Login loggedIn setLoggedIn={setLoggedIn} /> : ""}
         </Route>

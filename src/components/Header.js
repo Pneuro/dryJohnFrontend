@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "./Assets/Images/logo.png";
 import Video from "./Assets/Videos/LQ_nologo.mp4";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 function Header({ setEmail, email }) {
   const [modal, setModal] = useState(false);
+  const [vid, setVid] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = [email];
@@ -18,6 +19,22 @@ function Header({ setEmail, email }) {
       .then((response) => response.json())
       .catch((err) => console.error(err.message));
   };
+
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, [mobile]);
+
+  useEffect(() => {
+    {
+      mobile ? setVid("100vh") : setVid("100vw");
+    }
+  });
 
   function openModal(e) {
     e.preventDefault();
@@ -35,7 +52,7 @@ function Header({ setEmail, email }) {
       alignItems: "center",
       justifyItems: "center",
       margin: "auto",
-      paddingTop: "200px",
+      paddingTop: "100px",
     },
     logo: {
       zIndex: 1,
@@ -72,7 +89,7 @@ function Header({ setEmail, email }) {
       borderRadius: "1px",
     },
     video: {
-      minHeight: "100vh",
+      minWidth: vid,
       backgroundSize: "cover",
       zIndex: -1,
       position: "fixed",

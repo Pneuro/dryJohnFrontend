@@ -43,8 +43,9 @@ const styles = {
     minHeight: "100px",
     position: "sticky",
     top: "0",
-    width: "100vw",
+    maxWidth: "100vw",
     zIndex: 2,
+    marginBottom: "-50px",
   },
   list: {
     display: "grid",

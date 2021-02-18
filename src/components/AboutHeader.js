@@ -14,7 +14,7 @@ function AboutHeader() {
       maxWidth: "35vw",
       padding: "1em",
       color: "#3485BC",
-      backgroundColor: "#3333",
+      backgroundColor: "#333c",
       borderRadius: "5px",
     },
   };
