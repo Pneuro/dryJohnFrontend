@@ -71,7 +71,7 @@ function About() {
               imagination
             </quote>
           </p>
-          <a href="https://www.instagram.com/dry-john">
+          <a href="https://www.instagram.com/dry.john/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26.893"
