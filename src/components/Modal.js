@@ -1,21 +1,36 @@
-import { useEffect } from "react";
+import { useState } from "react";
 
-function Modal({ setEmail, setModal }) {
-  const onNameChange = (e) => console.log(e.target.value);
+function Modal({ setModal }) {
+  const [contactSent, setContactSent] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const onNameChange = (e) => setName(e.target.value);
   const onEmailChange = (e) => setEmail(e.target.value);
-  const headers = {
-    header: {
-      method: "POST",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
+  const onPhoneChange = (e) => setPhone(e.target.value);
+  const onMessageChange = (e) => setMessage(e.target.value);
 
-      "Content-Type": "application/json",
-    },
-  };
   // Send POST request to backend to add data to database
-  useEffect(() => {
-    fetch("/mailinglist", headers).then((res) => console.log(res));
-  }, []);
+  const data = [name, email, phone, message];
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("/contact", headers).then((res) =>
+      res
+        .json()
+        .then((res) => console.log(res))
+        .catch((err) => console.error(err))
+    );
+    
+    setContactSent(true);
+    setModal(false);
+  };
+  const headers = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  };
+
   const styles = {
     wrapper: {
       position: "absolute",
@@ -41,6 +56,14 @@ function Modal({ setEmail, setModal }) {
       border: ".5px black solid",
       borderRadius: "5px",
       width: "350px",
+      marginTop: "10px;",
+    },
+    inputCheck: {
+      height: "25px",
+      border: ".5px black solid",
+      borderRadius: "5px",
+      display: "flex",
+
       marginTop: "10px;",
     },
     form: {
@@ -79,27 +102,38 @@ function Modal({ setEmail, setModal }) {
       </div>
       <div style={styles.container}>
         <h1>Contact</h1>
-        <form style={styles.form} method="POST">
-          <input
-            style={styles.input}
-            placeholder="Name"
-            type="text"
-            onChange={onNameChange}
-          />
-          <input
-            style={styles.input}
-            placeholder="Email Address"
-            type="email"
-            onChange={onEmailChange}
-          />
-          <input
-            style={styles.input}
-            placeholder="Message"
-            type="textarea"
-            onChange={onEmailChange}
-          />
-          <button type="submit">Submit</button>
-        </form>
+        {!contactSent ? (
+          <form style={styles.form} onSubmit={handleSubmit} method="POST">
+            <input
+              style={styles.input}
+              placeholder="Name"
+              type="text"
+              onChange={onNameChange}
+            />
+            <input
+              style={styles.input}
+              placeholder="Email Address"
+              type="email"
+              onChange={onEmailChange}
+            />
+            <input
+              style={styles.input}
+              placeholder="Phone Number"
+              type="text"
+              onChange={onPhoneChange}
+            />
+            <input
+              style={styles.input}
+              placeholder="Message"
+              type="textarea"
+              onChange={onMessageChange}
+            />
+
+            <button type="submit">Submit</button>
+          </form>
+        ) : (
+          <p>We will contact you as soon as possible!</p>
+        )}
       </div>
     </div>
   );

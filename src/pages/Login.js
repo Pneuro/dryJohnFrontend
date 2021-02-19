@@ -1,25 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-function Login({ loggedIn, setLoggedIn }) {
+function Login({ setLoggedIn }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const emailUpdate = (e) => setEmail(e.target.value);
   const passwordUpdate = (e) => setPassword(e.target.value);
+  const data = [email, password];
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    fetch("/login", headers).then((res) =>
+      res
+        .json()
+        .then((res) => console.log(res))
+        .catch((err) => console.error(err))
+        .then(setLoggedIn(true))
+    );
   };
-  const data = [email, password];
   const headers = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   };
 
-  useEffect(() => {
-    fetch("/login", headers).then((res) => res.json);
-  }, []);
   const styles = {
     wrapper: {
       display: "flex",
@@ -42,6 +46,7 @@ function Login({ loggedIn, setLoggedIn }) {
   return (
     <div style={styles.wrapper}>
       <h1>Login</h1>
+
       <form method="POST" onSubmit={handleSubmit} style={styles.form}>
         <input
           onChange={emailUpdate}

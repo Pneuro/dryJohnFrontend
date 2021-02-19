@@ -29,7 +29,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       {!mobile && !navOpen ? (
         <>
           <Link to="/" exact style={styles.item}>
-            Homes
+            Home
           </Link>
           <Link to="/about" style={styles.item}>
             About
@@ -41,7 +41,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       ) : (
         <div style={styles.list}>
           <Link to="/" exact style={styles.item}>
-            HomeB
+            Home
           </Link>
           <Link to="/about" style={styles.item}>
             About

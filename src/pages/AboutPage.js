@@ -10,7 +10,7 @@ function About() {
     <>
       <Nav />
       <AboutHeader />
-      {/* <SlideShow /> */}
+      <SlideShow />
       <VideoPlayer />
       <Story />
       <Footer />

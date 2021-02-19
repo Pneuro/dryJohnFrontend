@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
 import BackendPage from "./pages/BackendPage";
+import Product from "./pages/Product";
 
 function App() {
   // api to Dry John backend.
@@ -20,6 +21,10 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState("Pete");
 
+  const logout = (e) => {
+    setLoggedIn(false);
+    setUser("");
+  };
   return (
     <div style={styles.container} className="App">
       <Router>
@@ -37,15 +42,16 @@ function App() {
           <AboutPage />
         </Route>
         <Route path="/products">
-          <Nav />
+          <Product />
         </Route>
         {/* Administration */}
         {/* Auth Provider */}
         <Route path="/admin/login">
+          <Nav />
           {!loggedIn ? (
             <Login loggedIn setLoggedIn={setLoggedIn} />
           ) : (
-            <BackendPage user={user} />
+            <BackendPage user={user} logout={logout} />
           )}
         </Route>
         <Route path="/order">
