@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
 import BackendPage from "./pages/BackendPage";
-import Product from "./pages/Product";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   // api to Dry John backend.
@@ -28,35 +28,37 @@ function App() {
   return (
     <div style={styles.container} className="App">
       <Router>
-        <Route path="/" exact>
-          <Nav />
-          <Header email={email} setEmail={setEmail} />
-          <Scene />
-          <News />
-          <About />
-          <Reviews reviews={reviews} setReviews={setReviews} />
+        <Switch>
+          <Route path="/" exact>
+            <Nav />
+            <Header email={email} setEmail={setEmail} />
+            <Scene />
+            <News />
+            <About />
+            <Reviews reviews={reviews} setReviews={setReviews} />
 
-          <Footer />
-        </Route>
-        <Route path="/about">
-          <AboutPage />
-        </Route>
-        <Route path="/products">
-          <Product />
-        </Route>
-        {/* Administration */}
-        {/* Auth Provider */}
-        <Route path="/admin/login">
-          <Nav />
-          {!loggedIn ? (
-            <Login loggedIn setLoggedIn={setLoggedIn} />
-          ) : (
-            <BackendPage user={user} logout={logout} />
-          )}
-        </Route>
-        <Route path="/order">
-          <OrderNow />
-        </Route>
+            <Footer />
+          </Route>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/products">
+            <ProductPage />
+          </Route>
+          {/* Administration */}
+          {/* Auth Provider */}
+          <Route path="/admin/login">
+            <Nav />
+            {!loggedIn ? (
+              <Login loggedIn setLoggedIn={setLoggedIn} />
+            ) : (
+              <BackendPage user={user} logout={logout} />
+            )}
+          </Route>
+          <Route path="/order">
+            <OrderNow />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );

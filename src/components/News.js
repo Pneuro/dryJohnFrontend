@@ -27,7 +27,7 @@ function News() {
       backgroundColor: "#3485BC",
       position: "relative",
       zIndex: 1,
-      
+
       padding: "1em",
       minHeight: "80vh",
       display: "flex",
@@ -65,8 +65,8 @@ function News() {
       <div style={styles.entries}>
         {news.map((entry) => (
           <div key={entry.id}>
-            <img src="" alt="placeholder" />
-            <h1>{entry.title}</h1>
+            <img src="" alt="placeholder for image" />
+            <h2>{entry.title}</h2>
             <p>{entry.message}</p>
           </div>
         ))}

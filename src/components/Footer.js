@@ -47,13 +47,9 @@ const styles = {
     justifyContent: "center",
     position: "relative",
     zIndex: 1,
-    background: "linear-gradient(90deg, #fffa, #333a)",
+    
     border: "#ddd 1px solid",
-    background: "rgb(229, 230, 229)",
-    background:
-      "-moz-linear-gradient(164deg, rgba(229,230,229,.7) 0%, rgba(134,164,184,1) 100%)",
-    background:
-      "-webkit-linear-gradient(164deg, rgba(229,230,229,.7) 0%, rgba(134,164,184,1) 100%)",
+
     background:
       "linear-gradient(164deg, rgba(229,230,229,.2) 0%, rgba(134,164,184,1) 100%)",
     borderBottom: "none",
