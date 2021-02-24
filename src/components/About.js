@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import Pete from "./Assets/Images/petephinney.png";
 
@@ -64,7 +65,13 @@ function About() {
         <img src={Pete} alt="Pete Phinney himself" style={styles.image} />
         <div style={styles.text}>
           <p>Pete Phinney</p>
-          <p>Product Designer / CEO at Dry John</p>
+          <motion.p
+            animate={{ y: [40, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+            style={styles.p}
+          >
+            Product Designer / CEO at Dry John
+          </motion.p>
           <p>
             <quote>
               I love this planet, let's keep it clean and healthy! - Pete in my

@@ -13,9 +13,16 @@ function Login({ setLoggedIn }) {
     fetch("/login", headers).then((res) =>
       res
         .json()
-        .then((res) => console.log(res))
+        .then((res) => {
+          console.log(res.data)
+          if (res.data === "pete@dryjohn.com") {
+            console.log(res);
+            setLoggedIn(true)
+          } else {
+            console.log(res);
+          }
+        })
         .catch((err) => console.error(err))
-        .then(setLoggedIn(true))
     );
   };
   const headers = {

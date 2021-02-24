@@ -1,26 +1,36 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import AllPosts from "./AllPosts";
 
 function News() {
   const [news, setNews] = useState([
     {
       id: Math.random() * 1000,
       title: "Award winning style",
-      message:
+      body:
         "Dry John just won an award for being best in class, innovative and wonderful!",
+      image:
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80",
     },
     {
       id: Math.random() * 1000,
       title: "Friend of the planet",
-      message:
+      body:
         "Dry John just won an award for being best in class, innovative and wonderful!",
+
+      image:
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80",
     },
     {
       id: Math.random() * 1000,
       title: "If only animals could use it too",
-      message:
+      body:
         "Dry John just won an award for being best in class, innovative and wonderful!",
+
+      image:
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80",
     },
   ]);
+
   const styles = {
     container: {
       color: "#fff",
@@ -46,6 +56,9 @@ function News() {
       margin: "1em",
       fontSize: "16px",
     },
+    entry: {
+      margin: "1em",
+    },
     path: {
       position: "relative",
       zIndex: 2,
@@ -58,18 +71,16 @@ function News() {
       transform: "translateX(300px)",
       zIndex: 2,
     },
+    entryImage: {
+      width: "100%",
+      borderRadius: "5px",
+    },
   };
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Dry John News</h1>
       <div style={styles.entries}>
-        {news.map((entry) => (
-          <div key={entry.id}>
-            <img src="" alt="placeholder for image" />
-            <h2>{entry.title}</h2>
-            <p>{entry.message}</p>
-          </div>
-        ))}
+        <AllPosts />
       </div>
     </div>
   );

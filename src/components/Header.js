@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, useCycle } from "framer-motion";
+import { motion } from "framer-motion";
 import logo from "./Assets/Images/logo.png";
 import Video from "./Assets/Videos/LQ_nologo.mp4";
 import Modal from "./Modal";
@@ -8,35 +8,18 @@ function Header({ setEmail, email }) {
   const [modal, setModal] = useState(false);
   const [vid, setVid] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = [email];
-    const header = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-
-    fetch("/contact", header)
-      .then((response) => response.json())
-      .catch((err) => console.error(err.message));
-  };
-
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth < 500) {
       setMobile(true);
+      setVid("100vh");
     } else {
       setMobile(false);
+      setVid("100vw");
     }
   }, [mobile]);
 
-  useEffect(() => {
-    {
-      mobile ? setVid("100vh") : setVid("100vw");
-    }
-  }, []);
 
   function openModal(e) {
     e.preventDefault();
@@ -125,7 +108,7 @@ function Header({ setEmail, email }) {
           </motion.h1>
           <motion.p
             animate={{ y: [40, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.3, delay: .3 }}
+            transition={{ duration: 0.3, delay: 0.3 }}
             style={styles.p}
           >
             Dry John Toilet Bags provide a perfect resource for disposing of
@@ -135,7 +118,7 @@ function Header({ setEmail, email }) {
             <form style={styles.form} onSubmit={openModal}>
               <motion.button
                 animate={{ y: [40, 0], opacity: [0, 1] }}
-                transition={{ duration: 0.3, delay: .6 }}
+                transition={{ duration: 0.3, delay: 0.6 }}
                 type="submit"
                 className="button"
               >
@@ -148,7 +131,7 @@ function Header({ setEmail, email }) {
           <form style={styles.form}>
             <motion.button
               animate={{ y: [50, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.3, delay: .9 }}
+              transition={{ duration: 0.3, delay: 0.9 }}
               type="submit"
               className="button"
             >

@@ -18,7 +18,7 @@ function App() {
   // api to Dry John backend.
   const [email, setEmail] = useState("");
   const [reviews, setReviews] = useState([]);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   const [user, setUser] = useState("Pete");
 
   const logout = (e) => {
@@ -55,10 +55,10 @@ function App() {
               <BackendPage user={user} logout={logout} />
             )}
           </Route>
-          <Route path="/order">
-            <OrderNow />
-          </Route>
         </Switch>
+        <Route path="/order">
+          <OrderNow />
+        </Route>
       </Router>
     </div>
   );
