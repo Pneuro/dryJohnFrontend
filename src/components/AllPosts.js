@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function AllPosts({ showControls }) {
+function AllPosts({ showControls, baseUrl }) {
   const [posts, setPosts] = useState([
     {
       id: 419,
@@ -11,7 +11,7 @@ function AllPosts({ showControls }) {
   ]);
 
   useEffect(() => {
-    fetch(`/get_posts`)
+    fetch(`${baseUrl}/get_posts`)
       .then((res) => res.json())
       .then((res) => setPosts(res))
       .catch((err) => console.error(err));
@@ -22,7 +22,7 @@ function AllPosts({ showControls }) {
   //     .then((res) => console.log(res));
   // };
   const handleDelete = (e) => {
-    fetch(`/delete/${e}`);
+    fetch(`${baseUrl}/delete/${e}`);
     console.log(e);
   };
   console.log(posts);

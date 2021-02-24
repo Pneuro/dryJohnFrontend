@@ -20,7 +20,7 @@ function App() {
   const [reviews, setReviews] = useState([]);
   const [loggedIn, setLoggedIn] = useState(true);
   const [user, setUser] = useState("Pete");
-
+  const baseUrl = "https://dry-john-backend.herokuapp.com";
   const logout = (e) => {
     setLoggedIn(false);
     setUser("");
@@ -31,9 +31,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Nav />
-            <Header email={email} setEmail={setEmail} />
+            <Header email={email} setEmail={setEmail}  baseUrl={baseUrl}/>
             <Scene />
-            <News />
+            <News  baseUrl={baseUrl}/>
             <About />
             <Reviews reviews={reviews} setReviews={setReviews} />
 
@@ -43,7 +43,7 @@ function App() {
             <AboutPage />
           </Route>
           <Route path="/products">
-            <ProductPage />
+            <ProductPage/>
           </Route>
           {/* Administration */}
           {/* Auth Provider */}
@@ -52,7 +52,7 @@ function App() {
             {!loggedIn ? (
               <Login loggedIn setLoggedIn={setLoggedIn} />
             ) : (
-              <BackendPage user={user} logout={logout} />
+              <BackendPage user={user} logout={logout}  baseUrl={baseUrl}/>
             )}
           </Route>
         </Switch>

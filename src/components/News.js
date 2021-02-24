@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import AllPosts from "./AllPosts";
 
-function News() {
+function News({ baseUrl }) {
   const [news, setNews] = useState([
     {
       id: Math.random() * 1000,
@@ -80,7 +80,7 @@ function News() {
     <div style={styles.container}>
       <h1 style={styles.title}>Dry John News</h1>
       <div style={styles.entries}>
-        <AllPosts />
+        <AllPosts baseUrl={baseUrl} />
       </div>
     </div>
   );
