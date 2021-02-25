@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import BlogForm from "../components/BlogForm";
 import AllPosts from "../components/AllPosts";
+import Footer from "../components/Footer";
 const BackendPage = ({ user, logout }) => {
   const styles = {
     wrapper: {
@@ -14,6 +15,7 @@ const BackendPage = ({ user, logout }) => {
       <button onClick={() => logout()}>Logout</button>
       <BlogForm />
       <AllPosts showControls={true} />
+      <Footer />
     </div>
   );
 };

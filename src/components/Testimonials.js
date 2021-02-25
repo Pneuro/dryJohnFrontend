@@ -18,24 +18,24 @@ function Reviews() {
       id: "RBMUHEO2JRPY2",
       asin: { original: "B078X3TCRG", variant: "" },
       review_data: "Reviewed in the United States on July 2, 2020",
-      date: { date: "July 2, 2020", unix: 1593655200 },
+      date: { date: "February 8, 2018", unix: 1593655200 },
       name: "geb49",
       rating: 5,
-      title: "BEST EVER..",
+      title: "Great product and is environmentally friendly.",
       review:
-        "FOR THOSE OF YOU WHO KNOW WHAT IT'S LIKE TO HAVE A TOILET NOT WORKING IN AN RV THIS IS THE PERFECT BACK UP! NO PUN INTENDED!!!! NO SMELLAND CAN ENGAGE ON A MAKE SHIFT TOILET ANYWHERE..",
+        "Excellent Product! Works perfectly with the toilet when having plumbing issues. Plan to use this also for camping (RV or tent) boating and traveling. The organic media absorbs odor and the bags are compostable. Will definitely reorder! ",
       verified_purchase: true,
     },
     {
       id: "RBMTHEO1JRPY2",
       asin: { original: "B078X3TCRG", variant: "" },
-      review_data: "Reviewed in the United States on July 2, 2020",
-      date: { date: "July 2, 2020", unix: 1593655200 },
+      review_data: "Reviewed in the United States on December 24, 2019",
+      date: { date: "December 24, 2019", unix: 1593655200 },
       name: "geb49",
       rating: 5,
-      title: "BEST EVER..",
+      title: "Camper's secret weapon.",
       review:
-        "FOR THOSE OF YOU WHO KNOW WHAT IT'S LIKE TO HAVE A TOILET NOT WORKING IN AN RV THIS IS THE PERFECT BACK UP! NO PUN INTENDED!!!! NO SMELLAND CAN ENGAGE ON A MAKE SHIFT TOILET ANYWHERE..",
+        "Great camping tool. Great for short distance travel in one's travel van , camper or SUV. ",
       verified_purchase: true,
     },
   ]);
@@ -56,7 +56,7 @@ function Reviews() {
   //     .then((res) => setReviews(res))
   //     .catch((err) => console.error(err));
   // }, [data]);
-  const star = "*";
+  
   return (
     <div style={styles.wrapper}>
       <h1>Testimonials</h1>
@@ -91,7 +91,7 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(375px, 1fr)",
     justifyContent: "center",
-    alignItems: "center",
+    gap: "2em",
   },
   path: {
     position: "relative",

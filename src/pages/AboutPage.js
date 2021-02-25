@@ -12,9 +12,9 @@ function About() {
       <Nav />
       
       <AboutHeader />
-      <SlideShow />
-      <VideoPlayer />
       <Story />
+      
+      <VideoPlayer />
       <Footer />
     </>
   );

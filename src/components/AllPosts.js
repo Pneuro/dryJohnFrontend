@@ -6,7 +6,6 @@ function AllPosts({ showControls, baseUrl }) {
       id: 419,
       title: "This is a title",
       body: "This is a body",
-      image: "this is image",
     },
   ]);
 
@@ -16,32 +15,40 @@ function AllPosts({ showControls, baseUrl }) {
       .then((res) => setPosts(res))
       .catch((err) => console.error(err));
   }, []);
-  // const handleEdit = (e) => {
-  //   fetch(`/edit/${e}`)
-  //     .then((res) => res.json())
-  //     .then((res) => console.log(res));
-  // };
+  const handleEdit = (e) => {
+    fetch(`/edit/${e}`)
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  };
   const handleDelete = (e) => {
     fetch(`${baseUrl}/delete/${e}`);
     console.log(e);
   };
-  console.log(posts);
+  const styles = {
+    post: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(370px, 1fr))",
+    },
+    article: {
+      maxWidth: "500px",
+    },
+  };
   return (
-    <div>
+    <div style={styles.post}>
       {posts.map((post) => (
-        <div key={post.id}>
+        <article style={styles.article} key={post.id}>
           <h1>{post.title}</h1>
-
           <p>{post.body}</p>
+          <p>{post.image}</p>
           {showControls ? (
             <div>
               <button onClick={() => handleDelete(post.id)}>Delete</button>
-              {/* <button onClick={() => handleEdit(post.id)}>Edit</button> */}
+              <button onClick={() => handleEdit(post.id)}>Edit</button>
             </div>
           ) : (
             ""
           )}
-        </div>
+        </article>
       ))}
     </div>
   );
@@ -51,4 +58,5 @@ export default AllPosts;
 
 AllPosts.defaultProps = {
   showControls: false,
+  baseUrl: "",
 };

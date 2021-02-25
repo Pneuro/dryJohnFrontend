@@ -62,22 +62,33 @@ function About() {
       </svg>
 
       <div style={styles.container}>
-        <img src={Pete} alt="Pete Phinney himself" style={styles.image} />
+        <motion.img
+          animate={{ y: [40, 0], opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          src={Pete}
+          alt="Pete Phinney himself"
+          style={styles.image}
+        />
         <div style={styles.text}>
-          <p>Pete Phinney</p>
           <motion.p
             animate={{ y: [40, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.3, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Pete Phinney
+          </motion.p>
+          <motion.p
+            animate={{ y: [40, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             style={styles.p}
           >
             Product Designer / CEO at Dry John
           </motion.p>
-          <p>
-            <quote>
-              I love this planet, let's keep it clean and healthy! - Pete in my
-              imagination
-            </quote>
-          </p>
+          <motion.p
+            animate={{ y: [40, 0], opacity: [0, 1] }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            I love this planet, let's keep it clean and healthy! - Pete Phinney
+          </motion.p>
           <a href="https://www.instagram.com/dry.john/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -113,9 +124,10 @@ const styles = {
   },
   container: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(500px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(375px, 1fr))",
     position: "relative",
-    padding: "5em",
+    padding: "5em 1em",
+    zIndex: 1,
   },
   trees: {
     position: "absolute",
@@ -128,7 +140,7 @@ const styles = {
     justifyContent: "center",
   },
   image: {
-    maxWidth: "80vw",
+    maxWidth: "60vw",
     justifySelf: "center",
   },
 };

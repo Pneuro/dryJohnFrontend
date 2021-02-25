@@ -1,5 +1,6 @@
 import React from "react";
 import OfferingHand from "./OfferingHand";
+import { motion } from "framer-motion";
 
 function AboutHeader() {
   const styles = {
@@ -23,11 +24,15 @@ function AboutHeader() {
     <div style={styles.wrapper}>
       <OfferingHand />
       <div style={styles.greeting}>
-        <h1>About Dry John</h1>
-        <p>
+        <motion.h1 animate={{ y: [25, 0], duration: 0.3, opacity: [0, 1] }}>
+          About Dry John
+        </motion.h1>
+        <motion.p
+          animate={{ y: [25, 0], duration: 0.3, opacity: [0, 1], delay: 0.5 }}
+        >
           Compostable toilet bags suited for camping, traveling, cross-country
           trips, hiking, biking, and other time where nature may call.
-        </p>
+        </motion.p>
       </div>
     </div>
   );

@@ -29,19 +29,34 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       {!mobile && !navOpen ? (
         <>
           <Link to="/" exact style={styles.item}>
-            Home
+            <motion.p
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              
+            >
+              Home
+            </motion.p>
           </Link>
           <Link to="/about" style={styles.item}>
-            About
+            <motion.p
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              transition={{ delay: .1 }}
+            >
+              About
+            </motion.p>
           </Link>
           <Link to="/products" style={styles.item}>
-            Products
+            <motion.p
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              transition={{ delay: .2 }}
+            >
+              Products
+            </motion.p>
           </Link>
         </>
       ) : (
         <div style={styles.list}>
           <Link to="/" exact style={styles.item}>
-            Home
+            Homes
           </Link>
           <Link to="/about" style={styles.item}>
             About

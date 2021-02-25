@@ -42,3 +42,28 @@
   position: relative;
   z-index: 4;
 }
+
+.news:before {
+  content: "";
+  width: 100%;
+  height: 200px;
+  background: #3485bc;
+  clip-path: polygon(29% 86%, 68% 92%, 100% 84%, 100% 100%, 0 100%, 0 90%);
+  position: absolute;
+  z-index: 1;
+  font-weight: 200;
+  font-size: 20px;
+  top: -199px;
+}
+.news:after {
+  content: "";
+  width: 100%;
+  height: 200px;
+  background: #8985cc;
+  clip-path: polygon(35% 21%, 76% 13%, 100% 22%, 100% 0, 0 0, 0 15%);
+  position: absolute;
+  z-index: 55;
+  font-weight: 200;
+  font-size: 20px;
+  bottom: -199px;
+}

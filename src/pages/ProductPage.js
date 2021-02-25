@@ -2,12 +2,10 @@ import React from "react";
 import Nav from "../components/Nav";
 
 import ImageGallery from "react-image-gallery";
-import imageZero from "../components/Assets/Images/SlideshowImages/imageZero.jpg";
-import imageZeroThumb from "../components/Assets/Images/SlideshowImages/imageZeroThumb.png";
-import imageOne from "../components/Assets/Images/SlideshowImages/imageOne.jpg";
-import imageOneThumb from "../components/Assets/Images/SlideshowImages/imageOneThumb.png";
-import imageTwo from "../components/Assets/Images/SlideshowImages/imageTwo.jpg";
-import imageTwoThumb from "../components/Assets/Images/SlideshowImages/imageTwoThumb.png";
+import tied from "../components/Assets/Images/SlideshowImages/tiedup_small.png";
+import topDown from "../components/Assets/Images/SlideshowImages/topdownview.png";
+import trashbucket from "../components/Assets/Images/SlideshowImages/TrashBucket.png";
+
 import imageThree from "../components/Assets/Images/SlideshowImages/imageThree.jpg";
 import imageThreeThumb from "../components/Assets/Images/SlideshowImages/imageThreeThumb.png";
 import imageFour from "../components/Assets/Images/SlideshowImages/imageFour.jpg";
@@ -15,28 +13,34 @@ import imageFourThumb from "../components/Assets/Images/SlideshowImages/imageFou
 import imageFive from "../components/Assets/Images/SlideshowImages/imageFive.jpg";
 import imageFiveThumb from "../components/Assets/Images/SlideshowImages/imageFiveThumb.png";
 import Footer from "../components/Footer";
+import SlideShow from "../components/SlideShow";
 function ProductPage() {
   const images = [
+    // {
+    //   original: imageOne,
+    //   thumbnail: imageOneThumb,
+    //   description: "1 The easiest way to transport human waste out of nature.",
+    // },
     {
-      original: imageZero,
-      thumbnail: imageZeroThumb,
-      description: "0 The easiest way to transport human waste out of nature.",
-    },
-    {
-      original: imageOne,
-      thumbnail: imageOneThumb,
+      original: tied,
+      thumbnail: tied,
       description: "1 The easiest way to transport human waste out of nature.",
     },
     {
-      original: imageTwo,
-      thumbnail: imageTwoThumb,
-      description: "2 The easiest way to transport human waste out of nature.",
+      original: topDown,
+      thumbnail: topDown,
+      description: "1 The easiest way to transport human waste out of nature.",
+    },
+    {
+      original: trashbucket,
+      thumbnail: trashbucket,
+      description: "1 The easiest way to transport human waste out of nature.",
     },
 
     {
       original: imageThree,
       thumbnail: imageThreeThumb,
-      description: "3 The easiest way to transport human waste out of nature.",
+      description: "Easy",
     },
     {
       original: imageFour,
@@ -55,6 +59,7 @@ function ProductPage() {
       <Nav />
       <h1>Product</h1>
       <ImageGallery items={images} />
+      <SlideShow />
       <Footer />
     </>
   );
