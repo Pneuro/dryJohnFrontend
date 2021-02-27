@@ -27,7 +27,7 @@ function AllPosts({ showControls, baseUrl }) {
   const styles = {
     post: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(370px, 1fr))",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
     },
     article: {
       maxWidth: "500px",

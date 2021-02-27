@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import tied from "./Assets/Images/SlideshowImages/tiedup_small.png";
 import topDown from "./Assets/Images/SlideshowImages/topdownview.png";
-import trashbucket from "./Assets/Images/SlideshowImages/TrashBucket.png";
+
 import "./styles.css";
 
 export default function SlideShow({
-  images = [tied, topDown, trashbucket],
+  images = [tied, topDown],
   interval = 3000,
 }) {
   const [thumbnails, setThumbnails] = useState([]);
@@ -82,8 +82,8 @@ export default function SlideShow({
   }
 
   return (
-    <section className="slideshow">
-      <h1>Product Images</h1>
+    <section style={styles.wrapper} className="slideshow">
+      <h1 style={styles.h1}>Product Images</h1>
       <div className="slide-holder">
         <section className="slide previous-slide">
           <div style={previousSlideStyle} className="slide-thumbnail"></div>
@@ -103,3 +103,13 @@ export default function SlideShow({
     </section>
   );
 }
+
+const styles = {
+  wrapper: {
+    position: "relative",
+    zIndex: 4,
+  },
+  h1: {
+    color: "#fff",
+  },
+};

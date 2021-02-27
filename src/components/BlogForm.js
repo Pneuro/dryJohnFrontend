@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const BlogForm = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [image, setImage] = useState({ preview: "", raw: "" });
+  const [image, setImage] = useState({ preview: "", raw: "", title, body });
 
   const onTitleChange = (e) => setTitle(e.target.value);
   const onBodyChange = (e) => setBody(e.target.value);
@@ -13,6 +13,8 @@ const BlogForm = () => {
       setImage({
         preview: URL.createObjectURL(e.target.files[0]),
         raw: e.target.files[0],
+        text: title,
+        body: body,
       });
     }
   };
@@ -32,6 +34,25 @@ const BlogForm = () => {
       .then((res) => console.log(res))
       .catch((err) => console.error(err.message));
   };
+
+  const handleImageSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("file", image.text);
+    formData.append("file", image.body);
+    formData.append("file", image.raw);
+    console.log(`FormData: ${formData.getAll("file")}`);
+    const imageHeader = {
+      method: "POST",
+
+      body: formData,
+    };
+    fetch("/image_entry", imageHeader)
+      .then((response) => response.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.error(err.message));
+  };
+
   const styles = {
     wrapper: {
       display: "grid",
@@ -44,32 +65,41 @@ const BlogForm = () => {
     image: {
       borderRadius: "5px",
     },
+    input: {
+      margin: "1em",
+    },
   };
   return (
-    <form method="POST" onSubmit={handleSubmit} style={styles.wrapper}>
+    <form method="POST" onSubmit={handleImageSubmit} style={styles.wrapper}>
       <h2>Post Entry Form</h2>
       <input
+        name="title"
         placeholder="Title"
         type="text"
         onChange={onTitleChange}
-        style={{ fontSize: "20px" }}
+        style={styles.input}
       />
 
       <textarea
+        name="body"
         style={{ fontSize: "12px" }}
         placeholder="Body"
         type="textarea"
         onChange={onBodyChange}
         rows="10"
+        style={styles.input}
       />
       <input
-        name="image"
+        name="file"
         placeholder="Image"
         type="file"
-        accept="image/*"
+        required={true}
         onChange={onImageChange}
+        style={styles.input}
       />
-      <button type="submit">Submit</button>
+      <button style={styles.input} type="submit">
+        Submit
+      </button>
       {image.preview ? (
         <img
           src={image.preview}
@@ -88,6 +118,7 @@ const BlogForm = () => {
 BlogForm.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
+  image: PropTypes.object,
 };
 
 export default BlogForm;

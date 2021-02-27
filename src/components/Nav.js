@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { motion } from "framer-motion";
 import Logo from "./Assets/Images/logo.png";
 import Burger from "./Burger";
 import NavLinks from "./NavLinks";
@@ -18,7 +18,13 @@ function Nav() {
   return (
     <div style={styles.container}>
       <div>
-        <img src={Logo} alt="dry john logo" style={styles.logo} />
+        <motion.img
+          animate={{ rotate: [0, 720, 0], scale: [1, 1.5, 1] }}
+          transition={{ delay: 2 }}
+          src={Logo}
+          alt="dry john logo"
+          style={styles.logo}
+        />
       </div>
       {!mobile ? (
         <ul style={styles.list}>

@@ -59,7 +59,7 @@ function ProductPage() {
       <Nav />
       <h1>Product</h1>
       <ImageGallery items={images} />
-      <SlideShow />
+      
       <Footer />
     </>
   );

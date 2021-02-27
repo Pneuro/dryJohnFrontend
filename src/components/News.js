@@ -2,6 +2,25 @@ import { useState, useEffect } from "react";
 import AllPosts from "./AllPosts";
 
 function News({ baseUrl }) {
+  const [lastYPos, setLastYPos] = useState(0);
+  const [shouldShowActions, setShouldShowActions] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const yPos = window.scrollY;
+      const isScrollingUp = yPos < lastYPos;
+
+      setShouldShowActions(isScrollingUp);
+      setLastYPos(yPos);
+    }
+
+    window.addEventListener("scroll", handleScroll, false);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll, false);
+    };
+  }, [lastYPos]);
+
   const styles = {
     container: {
       color: "#fff",

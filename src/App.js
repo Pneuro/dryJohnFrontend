@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
 import BackendPage from "./pages/BackendPage";
 import ProductPage from "./pages/ProductPage";
+import SlideShow from "./components/SlideShow";
 
 function App() {
   // api to Dry John backend.
@@ -31,19 +32,19 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Nav />
-            <Header email={email} setEmail={setEmail}  baseUrl={baseUrl}/>
+            <Header email={email} setEmail={setEmail} baseUrl={baseUrl} />
             <Scene />
-            <News  baseUrl={baseUrl}/>
+            <News baseUrl={baseUrl} />
             <About />
             <Reviews reviews={reviews} setReviews={setReviews} />
-
+            <SlideShow />
             <Footer />
           </Route>
           <Route path="/about">
             <AboutPage />
           </Route>
           <Route path="/products">
-            <ProductPage/>
+            <ProductPage />
           </Route>
           {/* Administration */}
           {/* Auth Provider */}
@@ -52,7 +53,7 @@ function App() {
             {!loggedIn ? (
               <Login loggedIn setLoggedIn={setLoggedIn} />
             ) : (
-              <BackendPage user={user} logout={logout}  baseUrl={baseUrl}/>
+              <BackendPage user={user} logout={logout} baseUrl={baseUrl} />
             )}
           </Route>
         </Switch>

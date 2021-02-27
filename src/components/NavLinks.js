@@ -30,7 +30,9 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
         <>
           <Link to="/" exact style={styles.item}>
             <motion.p
+              
               animate={{ opacity: [0, 1], y: [10, 0] }}
+              transition={{ delay: .1 }}
               
             >
               Home
@@ -39,7 +41,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
           <Link to="/about" style={styles.item}>
             <motion.p
               animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: .1 }}
+              transition={{ delay: .2 }}
             >
               About
             </motion.p>
@@ -47,7 +49,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
           <Link to="/products" style={styles.item}>
             <motion.p
               animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: .2 }}
+              transition={{ delay: .3 }}
             >
               Products
             </motion.p>
