@@ -3,6 +3,40 @@ import React from "react";
 import Pete from "./Assets/Images/beach_pete.jpg";
 
 function About() {
+  const styles = {
+    wrapper: {
+      backgroundColor: "#8DC84A",
+      color: "#fff",
+      position: "relative",
+      zIndex: 1,
+    },
+    title: {
+      textAlign: "center",
+    },
+    container: {
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(375px, 1fr))",
+      position: "relative",
+      padding: "5em 1em",
+      zIndex: 1,
+    },
+    trees: {
+      position: "absolute",
+      transform: "translateX(0vw)",
+      zIndex: 0,
+    },
+    text: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+    },
+    image: {
+      maxWidth: "40vw",
+      justifySelf: "center",
+      borderRadius: "5px",
+    },
+  };
+
   return (
     <div style={styles.wrapper}>
       <h1 style={styles.title}>About Dry John</h1>
@@ -111,37 +145,3 @@ function About() {
 }
 
 export default About;
-
-const styles = {
-  wrapper: {
-    backgroundColor: "#8DC84A",
-    color: "#fff",
-    position: "relative",
-    zIndex: 1,
-  },
-  title: {
-    textAlign: "center",
-  },
-  container: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(375px, 1fr))",
-    position: "relative",
-    padding: "5em 1em",
-    zIndex: 1,
-  },
-  trees: {
-    position: "absolute",
-    transform: "translateX(0vw)",
-    zIndex: 0,
-  },
-  text: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-  },
-  image: {
-    maxWidth: "40vw",
-    justifySelf: "center",
-    borderRadius: "5px",
-  },
-};

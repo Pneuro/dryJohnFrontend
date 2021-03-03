@@ -13,14 +13,10 @@ import imageFourThumb from "../components/Assets/Images/SlideshowImages/imageFou
 import imageFive from "../components/Assets/Images/SlideshowImages/imageFive.jpg";
 import imageFiveThumb from "../components/Assets/Images/SlideshowImages/imageFiveThumb.png";
 import Footer from "../components/Footer";
-import SlideShow from "../components/SlideShow";
+
+import HowTo from "../components/HowTo";
 function ProductPage() {
   const images = [
-    // {
-    //   original: imageOne,
-    //   thumbnail: imageOneThumb,
-    //   description: "1 The easiest way to transport human waste out of nature.",
-    // },
     {
       original: tied,
       thumbnail: tied,
@@ -59,7 +55,7 @@ function ProductPage() {
       <Nav />
       <h1>Product</h1>
       <ImageGallery items={images} />
-      
+      <HowTo />
       <Footer />
     </>
   );
