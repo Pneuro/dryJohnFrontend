@@ -4,8 +4,9 @@ function AllPosts({ showControls, baseUrl }) {
   const [posts, setPosts] = useState([
     {
       id: 419,
-      title: "This is a title",
-      body: "This is a body",
+      title: "This is a template",
+      body: "Template is a body",
+      image: "",
     },
   ]);
 
@@ -33,6 +34,7 @@ function AllPosts({ showControls, baseUrl }) {
       maxWidth: "500px",
     },
   };
+  console.log(posts)
   return (
     <div style={styles.post}>
       {posts.map((post) => (

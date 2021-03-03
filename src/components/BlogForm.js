@@ -18,33 +18,17 @@ const BlogForm = () => {
       });
     }
   };
-  console.log(title, body, image);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = [title, body, image];
-    const header = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-
-    fetch("/blog_entry", header)
-      .then((response) => response.json())
-      .then((res) => console.log(res))
-      .catch((err) => console.error(err.message));
-  };
+  console.log(image);
 
   const handleImageSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("file", image.text);
-    formData.append("file", image.body);
+    formData.append("title", title);
+    formData.append("body", body);
     formData.append("file", image.raw);
-    console.log(`FormData: ${formData.getAll("file")}`);
+    // Write some logic to ALSO send this image and the URL to it to Cloudinary to solve all the problems
     const imageHeader = {
       method: "POST",
-
       body: formData,
     };
     fetch("/image_entry", imageHeader)
@@ -109,7 +93,7 @@ const BlogForm = () => {
           height="100%"
         />
       ) : (
-        <p>Upload an image</p>
+        ""
       )}
     </form>
   );

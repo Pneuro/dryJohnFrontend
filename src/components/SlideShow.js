@@ -14,7 +14,8 @@ export default function SlideShow({
   const [nextSlideStyle, setNextSlideStyle] = useState({});
   const [currentSlideStyle, setCurrentSlideStyle] = useState({});
 
-  useEffect(() => {
+  useEffect((e) => {
+    
     setThumbnails(images);
     setCurrentSlideStyle(
       {

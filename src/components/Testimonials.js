@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 function Reviews() {
   const [data, setReviews] = useState([
     {
@@ -56,20 +57,31 @@ function Reviews() {
   //     .then((res) => setReviews(res))
   //     .catch((err) => console.error(err));
   // }, [data]);
-  
+  const star = <FaStar />;
   return (
     <div style={styles.wrapper}>
       <h1>Testimonials</h1>
       <div style={styles.container}>
         {data.map((review) => (
-          <div style={styles.testimonials}>
+          <div style={styles.testimonial}>
             <h1>{review.title}</h1>
-
+            <p>
+              {star}
+              {star}
+              {star}
+              {star}
+              {star}
+            </p>
             <p>{review.review}</p>
+            <br />
             <p>{review.date.date}</p>
           </div>
         ))}
       </div>
+      <p>
+        Reviews pulled from Amazon.com. to visit,{" "}
+        <Link to="/order">click here.</Link>
+      </p>
     </div>
   );
 }
@@ -83,7 +95,6 @@ const styles = {
     minHeight: "40vh",
     position: "relative",
     zIndex: 1,
-
     padding: "1em",
   },
   container: {

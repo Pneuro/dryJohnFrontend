@@ -9,6 +9,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       listStyle: "none",
       padding: "1em",
       fontSize: fontSize,
+      fontWeight: "bold"
     },
     list: {
       display: "flex",

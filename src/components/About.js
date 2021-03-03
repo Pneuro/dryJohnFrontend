@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import Pete from "./Assets/Images/petephinney.png";
+import Pete from "./Assets/Images/beach_pete.jpg";
 
 function About() {
   return (
@@ -140,7 +140,8 @@ const styles = {
     justifyContent: "center",
   },
   image: {
-    maxWidth: "60vw",
+    maxWidth: "40vw",
     justifySelf: "center",
+    borderRadius: "5px",
   },
 };

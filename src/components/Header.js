@@ -20,7 +20,6 @@ function Header({ setEmail, email }) {
     }
   }, [mobile]);
 
-
   function openModal(e) {
     e.preventDefault();
     if (!modal) {
@@ -88,7 +87,7 @@ function Header({ setEmail, email }) {
   };
 
   return (
-    <div className="header">
+    <main className="header">
       <div style={styles.container}>
         <video
           src={Video}
@@ -150,7 +149,7 @@ function Header({ setEmail, email }) {
           style={styles.logo}
         />
       </div>
-    </div>
+    </main>
   );
 }
 

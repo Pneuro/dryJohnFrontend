@@ -37,7 +37,7 @@ function App() {
             <News baseUrl={baseUrl} />
             <About />
             <Reviews reviews={reviews} setReviews={setReviews} />
-            <SlideShow />
+
             <Footer />
           </Route>
           <Route path="/about">
