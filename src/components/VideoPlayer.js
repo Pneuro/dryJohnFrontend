@@ -3,7 +3,7 @@ import React from "react";
 function VideoPlayer() {
   return (
     <div style={styles.wrapper}>
-      <h1 style={styles.text}>Dry John Ad</h1>
+      <h1 style={styles.text}>Dry John Video</h1>
       <iframe
         style={styles.container}
         height="100%"

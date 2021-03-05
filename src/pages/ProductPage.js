@@ -2,9 +2,9 @@ import React from "react";
 import Nav from "../components/Nav";
 
 import ImageGallery from "react-image-gallery";
-import tied from "../components/Assets/Images/SlideshowImages/tiedup_small.png";
-import topDown from "../components/Assets/Images/SlideshowImages/topdownview.png";
-import trashbucket from "../components/Assets/Images/SlideshowImages/TrashBucket.png";
+import tied from "../components/Assets/Images/SlideshowImages/tiedup.jpg";
+import topDown from "../components/Assets/Images/SlideshowImages/topdownview.jpg";
+import trashbucket from "../components/Assets/Images/SlideshowImages/TrashBucket.jpg";
 
 import imageThree from "../components/Assets/Images/SlideshowImages/imageThree.jpg";
 import imageThreeThumb from "../components/Assets/Images/SlideshowImages/imageThreeThumb.png";

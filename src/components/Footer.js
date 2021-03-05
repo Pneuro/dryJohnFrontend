@@ -43,7 +43,7 @@ const styles = {
     alignItems: "center",
     color: "#fff",
     margin: "auto",
-    marginTop: "60vh",
+    marginTop: "20vh",
     justifyContent: "center",
     position: "relative",
     zIndex: 1,

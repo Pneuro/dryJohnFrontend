@@ -31,7 +31,8 @@ function About() {
       justifyContent: "center",
     },
     image: {
-      maxWidth: "40vw",
+      maxWidth: "30vw",
+      minWidth: "300px",
       justifySelf: "center",
       borderRadius: "5px",
     },

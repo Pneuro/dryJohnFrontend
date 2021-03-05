@@ -14,6 +14,8 @@ function AboutHeader() {
     },
     greeting: {
       maxWidth: "35vw",
+      minWidth: "300px",
+      margin: 'auto',
       padding: "1em",
       color: "#3485BC",
       backgroundColor: "#333c",
