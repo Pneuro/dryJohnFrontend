@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
@@ -25,12 +25,25 @@ function App() {
     setLoggedIn(false);
     setUser("");
   };
+  const [mobile, setMobile] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 500) {
+      console.log(window.innerWidth);
+      setMobile(true);
+
+      console.log(`Set mobile? ${mobile}`);
+    } else {
+      setMobile(false);
+    }
+  }, []);
   return (
     <div style={styles.container} className="App">
       <Router>
         <Switch>
           <Route path="/" exact>
-            <Nav />
+            <Nav mobile={mobile} navOpen={navOpen} setNavOpen={setNavOpen} />
             <Header email={email} setEmail={setEmail} baseUrl={baseUrl} />
             <Scene />
             <News baseUrl={baseUrl} />
@@ -47,7 +60,7 @@ function App() {
           {/* Administration */}
           {/* Auth Provider */}
           <Route path="/admin/login">
-            <Nav />
+            <Nav mobile={mobile} navOpen={navOpen} setNavOpen={setNavOpen} />
             {!loggedIn ? (
               <Login loggedIn setLoggedIn={setLoggedIn} />
             ) : (

@@ -1,34 +1,16 @@
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 import Logo from "./Assets/Images/logo.png";
 import Burger from "./Burger";
 import NavLinks from "./NavLinks";
-function Nav() {
-  const [mobile, setMobile] = useState(false);
-  const [navOpen, setNavOpen] = useState(false);
-  const [fontSize, setFontSize] = useState("");
-  useEffect(() => {
-    if (window.innerWidth < 500) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  }, [mobile]);
-
+function Nav({ mobile, navOpen, setNavOpen }) {
   return (
     <div style={styles.container}>
       <div>
-        <motion.img
-          animate={{ rotate: [0, 720, 0], scale: [1, 1.5, 1] }}
-          transition={{ delay: 2 }}
-          src={Logo}
-          alt="dry john logo"
-          style={styles.logo}
-        />
+        <img src={Logo} alt="dry john logo" style={styles.logo} />
       </div>
       {!mobile ? (
         <ul style={styles.list}>
-          <NavLinks fontSize={fontSize} setFontSize={setFontSize} />
+          <NavLinks mobile={mobile} navOpen={navOpen} />
         </ul>
       ) : (
         <Burger navOpen={navOpen} setNavOpen={setNavOpen} mobile={mobile} />
@@ -42,6 +24,7 @@ export default Nav;
 const styles = {
   container: {
     display: "flex",
+    a
     justifyContent: "space-around",
     alignItems: "center",
     color: "#3485BC",
@@ -62,4 +45,14 @@ const styles = {
   logo: {
     maxHeight: "90px",
   },
+};
+
+Nav.propTypes = {
+  mobile: PropTypes.bool,
+  navOpen: PropTypes.bool,
+};
+
+Nav.defaultProps = {
+  mobile: false,
+  navOpen: false,
 };

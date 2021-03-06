@@ -1,7 +1,7 @@
 import React from "react";
 import NavLinks from "./NavLinks";
 
-function Burger({ navOpen, setNavOpen }) {
+function Burger({ navOpen, setNavOpen, mobile, setMobile }) {
   const styles = {
     burger: {
       maxWidth: "30px",
@@ -80,7 +80,7 @@ function Burger({ navOpen, setNavOpen }) {
           <div style={styles.line2Open}></div>
           <div style={styles.line3Open}></div>
 
-          <NavLinks />
+          <NavLinks mobile={mobile} />
         </div>
       )}
     </div>

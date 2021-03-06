@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Burger from "./Burger";
 
 function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
+  console.log(`This is the mobile status:${mobile} and ${navOpen}`);
   const styles = {
     item: {
       color: "#3485bc",
@@ -9,7 +11,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       listStyle: "none",
       padding: "1em",
       fontSize: fontSize,
-      fontWeight: "bold"
+      fontWeight: "bold",
     },
     list: {
       display: "flex",
@@ -19,22 +21,21 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       position: "absolute",
       top: 0,
       left: 0,
-      background: "#333d",
+      background: "#333e",
       width: "100vw",
       height: "100vh",
       zIndex: 1,
+      fontSize: "24px",
     },
   };
   return (
     <>
-      {!mobile && !navOpen ? (
+      {!mobile ? (
         <>
           <Link to="/" exact style={styles.item}>
             <motion.p
-              
               animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: .1 }}
-              
+              transition={{ delay: 0.1 }}
             >
               Home
             </motion.p>
@@ -42,7 +43,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
           <Link to="/about" style={styles.item}>
             <motion.p
               animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: .2 }}
+              transition={{ delay: 0.2 }}
             >
               About
             </motion.p>
@@ -50,13 +51,13 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
           <Link to="/products" style={styles.item}>
             <motion.p
               animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: .3 }}
+              transition={{ delay: 0.3 }}
             >
               Products
             </motion.p>
           </Link>
         </>
-      ) : (
+      ) : !navOpen ? (
         <div style={styles.list}>
           <Link to="/" exact style={styles.item}>
             Homes
@@ -68,6 +69,8 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
             Products
           </Link>
         </div>
+      ) : (
+        ""
       )}
     </>
   );

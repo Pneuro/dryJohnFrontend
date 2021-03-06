@@ -19,10 +19,9 @@ const HowTo = () => {
       padding: "1em",
       borderRadius: "5px",
       color: "#fff",
-      
     },
     paragraph: {
-      fontSize: "16px"
+      fontSize: "16px",
     },
     image: {
       justifySelf: "end",
@@ -36,12 +35,12 @@ const HowTo = () => {
           <p style={styles.paragraph}>
             Step One: Place the bag inside 5 gallon or smaller container
           </p>
-          <img style={styles.image} src={imageOne} />
+          <img alt="Product" style={styles.image} src={imageOne} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>Step Two: Untie/Open it</p>
-          <img style={styles.image} src={imageTwo} />
+          <img alt="Product" style={styles.image} src={imageTwo} />
         </div>
 
         <div style={styles.step}>
@@ -50,33 +49,31 @@ const HowTo = () => {
             or turn into transportable solid within one hour after use,
             dimishing spilling or leakage
           </p>
-          <img style={styles.image} src={imageThree} />
+          <img alt="Product" style={styles.image} src={imageThree} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Four: Dispose of properly in a trash container.
           </p>
-          <img style={styles.image} src={imageFour} />
+          <img alt="Product" style={styles.image} src={imageFour} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Five: Place the bag inside 5 gallon or smaller container
           </p>
-          <img style={styles.image} src={imageFive} />
+          <img alt="Product" style={styles.image} src={imageFive} />
         </div>
         <div style={styles.step}>
-          <p style={styles.paragraph}>
-            Step Six: Make sure to remember toilet paper
-          </p>
-          <img style={styles.image} src={imageSix} />
+          <p style={styles.paragraph}>Step Six: Hit the target</p>
+          <img alt="Product" style={styles.image} src={imageSix} />
         </div>
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Seven: Clean up the mess in an eco-friendly way!
           </p>
-          <img style={styles.image} src={imageSeven} />
+          <img alt="Product" style={styles.image} src={imageSeven} />
         </div>
       </section>
     </div>

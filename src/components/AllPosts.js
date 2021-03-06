@@ -15,7 +15,7 @@ function AllPosts({ showControls, baseUrl }) {
       .then((res) => res.json())
       .then((res) => setPosts(res))
       .catch((err) => console.error(err));
-  }, []);
+  }, [baseUrl]);
   const handleEdit = (e) => {
     fetch(`/edit/${e}`)
       .then((res) => res.json())
@@ -34,7 +34,7 @@ function AllPosts({ showControls, baseUrl }) {
       maxWidth: "500px",
     },
   };
-  console.log(posts)
+  
   return (
     <div style={styles.post}>
       {posts.map((post) => (
