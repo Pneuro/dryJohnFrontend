@@ -24,7 +24,6 @@ export default Nav;
 const styles = {
   container: {
     display: "flex",
-    a
     justifyContent: "space-around",
     alignItems: "center",
     color: "#3485BC",

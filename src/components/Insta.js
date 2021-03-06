@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 
 const Insta = () => {
   const instagramBaseApi = "api.instagram.com";
-
+  useEffect(() => {
+    fetch(`${instagramBaseApi}`).then(console.log(response));
+  });
   return (
     <div>
       <h2>Title</h2>
