@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import logo from "./Assets/Images/logo.png";
+import headerLogo from "./Assets/Images/header_logo.png";
+
 import Video from "./Assets/Videos/LQ_nologo.mp4";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
@@ -144,7 +145,7 @@ function Header({ setEmail, email }) {
         <motion.img
           animate={{ y: [100, 0], opacity: [0, 1], rotate: [1800, 0] }}
           transition={{ duration: 0.3, delay: 1.2 }}
-          src={logo}
+          src={headerLogo}
           alt="Dry John Logo"
           style={styles.logo}
         />

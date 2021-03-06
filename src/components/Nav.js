@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import Logo from "./Assets/Images/logo.png";
+import navLogo from "./Assets/Images/nav_logo.png";
 import Burger from "./Burger";
 import NavLinks from "./NavLinks";
 function Nav({ mobile, navOpen, setNavOpen }) {
   return (
     <div style={styles.container}>
       <div>
-        <img src={Logo} alt="dry john logo" style={styles.logo} />
+        <img src={navLogo} alt="dry john logo" style={styles.logo} />
       </div>
       {!mobile ? (
         <ul style={styles.list}>

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Burger from "./Burger";
 
 function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
   console.log(`This is the mobile status:${mobile} and ${navOpen}`);

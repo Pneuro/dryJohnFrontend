@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
 import BackendPage from "./pages/BackendPage";
 import ProductPage from "./pages/ProductPage";
+import Insta from "./components/Insta";
 
 function App() {
   // api to Dry John backend.
@@ -47,6 +48,7 @@ function App() {
             <Header email={email} setEmail={setEmail} baseUrl={baseUrl} />
             <Scene />
             <News baseUrl={baseUrl} />
+
             <About />
             <Reviews reviews={reviews} setReviews={setReviews} />
             <Footer />
