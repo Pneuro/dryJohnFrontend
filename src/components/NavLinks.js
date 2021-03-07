@@ -59,7 +59,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       ) : !navOpen ? (
         <div style={styles.list}>
           <Link to="/" exact style={styles.item}>
-            Homes
+            Home
           </Link>
           <Link to="/about" style={styles.item}>
             About

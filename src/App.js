@@ -13,7 +13,7 @@ import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
 import BackendPage from "./pages/BackendPage";
 import ProductPage from "./pages/ProductPage";
-import Insta from "./components/Insta";
+import { Helmet } from "react-helmet";
 
 function App() {
   // api to Dry John backend.
@@ -41,6 +41,15 @@ function App() {
   }, []);
   return (
     <div style={styles.container} className="App">
+      <Helmet>
+        <title>Dry John</title>
+        <meta name="description" content="Dry John Toilet Bags" />
+        <meta
+          name="keywords"
+          content="Camping, Eco, Dry John, Eco-friendly, compostable, toilet bags"
+        />
+        <meta />
+      </Helmet>
       <Router>
         <Switch>
           <Route path="/" exact>
