@@ -18,6 +18,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "start" : "next start -p $PORT",
     "build": "next build",
     "eject": "next eject"
   },
