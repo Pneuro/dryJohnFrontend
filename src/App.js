@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "./App.css";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Reviews from "./components/Testimonials";
 import Scene from "./components/Scene";
 import News from "./components/News";
-import AboutPage from "./pages/AboutPage";
-import About from "./components/About";
+import AboutPage from "./pages/about";
+import About from "./components/AboutSection";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import OrderNow from "./components/OrderNow";
 import BackendPage from "./pages/BackendPage";
-import ProductPage from "./pages/ProductPage";
+import ProductPage from "./pages/products";
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -26,29 +26,17 @@ function App() {
     setLoggedIn(false);
     setUser("");
   };
-  const [mobile, setMobile] = useState(false);
-  const [navOpen, setNavOpen] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth < 500) {
-      console.log(window.innerWidth);
-      setMobile(true);
-
-      console.log(`Set mobile? ${mobile}`);
-    } else {
-      setMobile(false);
-    }
-  }, []);
+  
   return (
     <div style={styles.container} className="App">
       <Helmet>
         <title>Dry John</title>
-        <meta name="description" content="Dry John Toilet Bags" />
+        <meta name="description" content="Dry John Toilet Bags for securing your waste in nature" />
         <meta
           name="keywords"
-          content="Camping, Eco, Dry John, Eco-friendly, compostable, toilet bags"
+          content="Dry John, Camping, Eco, Eco-friendly, compostable, toilet bags"
         />
-        <meta />
+        <meta property="twitter:title" content="Dry John Toilet Bags" />
       </Helmet>
       <Router>
         <Switch>

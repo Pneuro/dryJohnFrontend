@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import Pete from "./Assets/Images/beach_pete.jpg";
+import Image from "next/image";
 
 function About() {
   const styles = {
@@ -97,13 +97,8 @@ function About() {
       </svg>
 
       <div style={styles.container}>
-        <motion.img
-          animate={{ y: [40, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.5 }}
-          src={Pete}
-          alt="Pete Phinney himself"
-          style={styles.image}
-        />
+        <Image src="/Assets/Images/beach_pete.jpg" width={100} height={100} />
+
         <div style={styles.text}>
           <motion.p
             animate={{ y: [40, 0], opacity: [0, 1] }}

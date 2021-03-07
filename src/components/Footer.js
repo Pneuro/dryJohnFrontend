@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import Logo from "./Assets/Images/logo.png";
+import Image from "next/image";
 
 function Footer() {
   return (
     <footer style={styles.container}>
-      <img src={Logo} alt="Dry John logo" style={styles.logo} />
+      <Image src="/Assets/Images/logo.png" width={100} height={100} />
+
       <div style={styles.list}>
         <ul>
           <h3>About</h3>
@@ -12,9 +12,9 @@ function Footer() {
         </ul>
         <ul>
           <h3>Product</h3>
-          <Link to="/order" style={styles.item}>
+          <a href="/order" style={styles.item}>
             Order
-          </Link>
+          </a>
         </ul>
         <ul>
           <h3>Contact</h3>
@@ -24,9 +24,9 @@ function Footer() {
         </ul>
         <ul>
           <h3>Administration</h3>
-          <Link to="/admin/login" exact style={styles.item}>
+          <a href="/admin/login" exact style={styles.item}>
             Login
-          </Link>
+          </a>
         </ul>
       </div>
       <p>Copyright &copy; 2021</p>
@@ -47,7 +47,7 @@ const styles = {
     justifyContent: "center",
     position: "relative",
     zIndex: 1,
-    
+
     border: "#ddd 1px solid",
 
     background:

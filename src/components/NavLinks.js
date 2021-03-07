@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
@@ -30,41 +29,42 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
   return (
     <>
       {!mobile ? (
-        <>
-          <Link to="/" exact style={styles.item}>
-            <motion.p
-              animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: 0.1 }}
-            >
-              Home
-            </motion.p>
-          </Link>
-          <Link to="/about" style={styles.item}>
-            <motion.p
-              animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: 0.2 }}
-            >
-              About
-            </motion.p>
-          </Link>
-          <Link to="/products" style={styles.item}>
-            <motion.p
-              animate={{ opacity: [0, 1], y: [10, 0] }}
-              transition={{ delay: 0.3 }}
-            >
-              Products
-            </motion.p>
-          </Link>
-        </>
+        <div>
+          <motion.a
+            animate={{ opacity: [0, 1], y: [10, 0] }}
+            transition={{ delay: 0.1 }}
+            href="/"
+            exact
+            style={styles.item}
+          >
+            Homes
+          </motion.a>
+          <motion.a
+            animate={{ opacity: [0, 1], y: [10, 0] }}
+            transition={{ delay: 0.2 }}
+            href="/about"
+            style={styles.item}
+          >
+            About
+          </motion.a>
+          <motion.a
+            animate={{ opacity: [0, 1], y: [10, 0] }}
+            transition={{ delay: 0.3 }}
+            href="/products"
+            style={styles.item}
+          >
+            Products
+          </motion.a>
+        </div>
       ) : !navOpen ? (
         <div style={styles.list}>
-          <Link to="/" exact style={styles.item}>
+          <Link href="/" exact style={styles.item}>
             Home
           </Link>
-          <Link to="/about" style={styles.item}>
+          <Link href="/about" style={styles.item}>
             About
           </Link>
-          <Link to="/products" style={styles.item}>
+          <Link href="/products" style={styles.item}>
             Products
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import { FaStar } from "react-icons/fa";
 function Reviews() {
   const [data, setReviews] = useState([
@@ -79,8 +79,7 @@ function Reviews() {
         ))}
       </div>
       <p>
-        Reviews pulled from Amazon.com. to visit,{" "}
-        <Link to="/order">click here.</Link>
+        Reviews pulled from Amazon.com. to visit, <a to="/order">click here.</a>
       </p>
     </div>
   );

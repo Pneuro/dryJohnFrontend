@@ -74,3 +74,7 @@ function News({ baseUrl }) {
 }
 
 export default News;
+
+News.defaultProps = {
+  baseUrl: "https://dry-john-backend.herokuapp.com/",
+};

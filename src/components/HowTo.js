@@ -1,11 +1,13 @@
-import imageOne from "./Assets/Images/How_to images/Screen Shot -1.png";
-import imageTwo from "./Assets/Images/How_to images/Screen Shot -2.png";
-import imageThree from "./Assets/Images/How_to images/Screen Shot -3.png";
-import imageFour from "./Assets/Images/How_to images/Screen Shot -4.png";
-import imageFive from "./Assets/Images/How_to images/Screen Shot -5.png";
-import imageSix from "./Assets/Images/How_to images/Screen Shot -6.png";
-import imageSeven from "./Assets/Images/How_to images/pooping.png";
+import Image from "next/image";
+
 const HowTo = () => {
+  const imageOne1 = "/Assets/Images/How_to images/Screen Shot -1.png";
+  const imageTwo = "/Assets/Images/How_to images/Screen Shot -2.png";
+  const imageThree = "/Assets/Images/How_to images/Screen Shot -3.png";
+  const imageFour = "/Assets/Images/How_to images/Screen Shot -4.png";
+  const imageFive = "/Assets/Images/How_to images/Screen Shot -5.png";
+  const imageSix = "/Assets/Images/How_to images/Screen Shot -6.png";
+  const imageSeven = "/Assets/Images/How_to images/pooping.png";
   const styles = {
     container: {
       display: "grid",
@@ -22,6 +24,7 @@ const HowTo = () => {
     },
     paragraph: {
       fontSize: "16px",
+      alignSelf: "center",
     },
     image: {
       justifySelf: "end",
@@ -29,18 +32,22 @@ const HowTo = () => {
   };
   return (
     <div>
-      <h1 style={{ textAlign: "center", color: "#3485bc" }}>How to use</h1>
+      <h1
+        style={{ textAlign: "center", color: "#3485bc", fontSize: "67.78px" }}
+      >
+        How to use
+      </h1>
       <section style={styles.container}>
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step One: Place the bag inside 5 gallon or smaller container
           </p>
-          <img alt="Product" style={styles.image} src={imageOne} />
+          <Image width={200} height={100} src={imageOne1} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>Step Two: Untie/Open it</p>
-          <img alt="Product" style={styles.image} src={imageTwo} />
+          <Image width={200} height={100} src={imageOne1} />
         </div>
 
         <div style={styles.step}>
@@ -49,31 +56,31 @@ const HowTo = () => {
             or turn into transportable solid within one hour after use,
             dimishing spilling or leakage
           </p>
-          <img alt="Product" style={styles.image} src={imageThree} />
+          <Image width={200} height={100} src={imageOne1} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Four: Dispose of properly in a trash container.
           </p>
-          <img alt="Product" style={styles.image} src={imageFour} />
+          <Image width={200} height={100} src={imageOne1} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Five: Place the bag inside 5 gallon or smaller container
           </p>
-          <img alt="Product" style={styles.image} src={imageFive} />
+          <Image width={200} height={100} src={imageOne1} />
         </div>
         <div style={styles.step}>
           <p style={styles.paragraph}>Step Six: Hit the target</p>
-          <img alt="Product" style={styles.image} src={imageSix} />
+          <Image width={200} height={100} src={imageOne1} />
         </div>
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Seven: Clean up the mess in an eco-friendly way!
           </p>
-          <img alt="Product" style={styles.image} src={imageSeven} />
+          <Image width={200} height={100} src={imageOne1} />
         </div>
       </section>
     </div>

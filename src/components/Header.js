@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import headerLogo from "./Assets/Images/header_logo.png";
 
-import Video from "./Assets/Videos/LQ_nologo.mp4";
+import Image from "next/image";
+
 import Modal from "./Modal";
-import { Link } from "react-router-dom";
+
 function Header({ setEmail, email }) {
   const [modal, setModal] = useState(false);
   const [vid, setVid] = useState(false);
@@ -37,7 +37,7 @@ function Header({ setEmail, email }) {
       alignItems: "center",
       justifyItems: "center",
       margin: "auto",
-      paddingTop: "100px",
+      marginTop: "80px",
     },
     logo: {
       zIndex: 1,
@@ -91,7 +91,7 @@ function Header({ setEmail, email }) {
     <main className="header">
       <div style={styles.container}>
         <video
-          src={Video}
+          src="Assets/Videos/LQ_nologo.mp4"
           alt="video"
           autoPlay
           muted
@@ -135,19 +135,16 @@ function Header({ setEmail, email }) {
               type="submit"
               className="button"
             >
-              <Link style={styles.link} to="/order">
+              <a style={styles.link} to="/order">
                 Order Now
-              </Link>
+              </a>
             </motion.button>
           </form>
         </div>
-
-        <motion.img
+        <motion.Image
+          src="/Assets/Images/header_logo.png"
           animate={{ y: [100, 0], opacity: [0, 1], rotate: [1800, 0] }}
           transition={{ duration: 0.3, delay: 1.2 }}
-          src={headerLogo}
-          alt="Dry John Logo"
-          style={styles.logo}
         />
       </div>
     </main>
@@ -157,3 +154,4 @@ function Header({ setEmail, email }) {
 export default Header;
 
 // if screen is less than 1758 px can I change the CSS section
+Header.defaultProps = {};

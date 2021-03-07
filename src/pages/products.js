@@ -1,21 +1,22 @@
 import React from "react";
 import Nav from "../components/Nav";
-
+import Image from "next/image";
 import ImageGallery from "react-image-gallery";
-import tied from "../components/Assets/Images/SlideshowImages/tiedup.jpg";
-import topDown from "../components/Assets/Images/SlideshowImages/topdownview.jpg";
-import trashbucket from "../components/Assets/Images/SlideshowImages/TrashBucket.jpg";
 
-import imageThree from "../components/Assets/Images/SlideshowImages/imageThree.jpg";
-import imageThreeThumb from "../components/Assets/Images/SlideshowImages/imageThreeThumb.png";
-import imageFour from "../components/Assets/Images/SlideshowImages/imageFour.jpg";
-import imageFourThumb from "../components/Assets/Images/SlideshowImages/imageFourThumb.png";
-import imageFive from "../components/Assets/Images/SlideshowImages/imageFive.jpg";
-import imageFiveThumb from "../components/Assets/Images/SlideshowImages/imageFiveThumb.png";
 import Footer from "../components/Footer";
-
 import HowTo from "../components/HowTo";
+
 function ProductPage() {
+  const tied = "/Assets/Images/SlideshowImages/tiedup.jpg";
+  const topDown = "/Assets/Images/SlideshowImages/topdownview.jpg";
+  const trashbucket = "/Assets/Images/SlideshowImages/TrashBucket.jpg";
+  const imageThree = "/Assets/Images/SlideshowImages/imageThree.jpg";
+  const imageThreeThumb = "/Assets/Images/SlideshowImages/imageThreeThumb.png";
+  const imageFour = "/Assets/Images/SlideshowImages/imageFour.jpg";
+  const imageFourThumb = "/Assets/Images/SlideshowImages/imageFourThumb.png";
+  const imageFive = "/Assets/Images/SlideshowImages/imageFive.jpg";
+  const imageFiveThumb = "/Assets/Images/SlideshowImages/imageFiveThumb.png";
+
   const images = [
     {
       original: tied,
@@ -54,8 +55,8 @@ function ProductPage() {
     <>
       <Nav />
       <h1>Product</h1>
-      <ImageGallery items={images} />
       <HowTo />
+      <ImageGallery items={images} />
       <Footer />
     </>
   );
