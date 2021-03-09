@@ -20,7 +20,8 @@
     "dev": "next dev",
     "start" : "next start -p $PORT",
     "build": "next build",
-    "eject": "next eject"
+    "eject": "next eject",
+    "heroku-postbuild" : "npm run build"
   },
   "eslintConfig": {
     "extends": [
