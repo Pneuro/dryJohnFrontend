@@ -37,7 +37,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
             exact
             style={styles.item}
           >
-            Homes
+            Home
           </motion.a>
           <motion.a
             animate={{ opacity: [0, 1], y: [10, 0] }}
@@ -58,15 +58,15 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
         </div>
       ) : !navOpen ? (
         <div style={styles.list}>
-          <Link href="/" exact style={styles.item}>
+          <a href="/" exact style={styles.item}>
             Home
-          </Link>
-          <Link href="/about" style={styles.item}>
+          </a>
+          <a href="/about" style={styles.item}>
             About
-          </Link>
-          <Link href="/products" style={styles.item}>
+          </a>
+          <a href="/products" style={styles.item}>
             Products
-          </Link>
+          </a>
         </div>
       ) : (
         ""

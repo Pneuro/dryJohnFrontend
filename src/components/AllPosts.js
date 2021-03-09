@@ -29,12 +29,14 @@ function AllPosts({ showControls, baseUrl }) {
     post: {
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "1em",
+      wordBreak: "keep-all",
     },
     article: {
       maxWidth: "500px",
     },
   };
-  
+
   return (
     <div style={styles.post}>
       {posts.map((post) => (

@@ -21,7 +21,7 @@ function Modal({ setModal }) {
         .then((res) => console.log(res))
         .catch((err) => console.error(err))
     );
-    
+
     setContactSent(true);
     setModal(false);
   };
@@ -37,8 +37,9 @@ function Modal({ setModal }) {
       background: "#222d",
       color: "#fff",
       zIndex: 4,
-      width: "100%",
-      height: "100%",
+      width: "100vw",
+      height: "100vh",
+      zIndex: 50,
       top: 0,
       right: 0,
       left: 0,

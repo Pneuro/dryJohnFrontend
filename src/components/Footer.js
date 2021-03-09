@@ -3,8 +3,9 @@ import Image from "next/image";
 function Footer() {
   return (
     <footer style={styles.container}>
-      <Image src="/Assets/Images/logo.png" width={100} height={100} />
 
+
+      <img src="/Assets/Images/logo.png" alt="footer logo" style={styles.logo}/>
       <div style={styles.list}>
         <ul>
           <h3>About</h3>

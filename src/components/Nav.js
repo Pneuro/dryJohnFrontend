@@ -6,7 +6,7 @@ import NavLinks from "./NavLinks";
 function Nav() {
   const [mobile, setMobile] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
-
+  const navLogo = "/Assets/Images/nav_logo.png";
   useEffect(() => {
     if (window.innerWidth < 500) {
       console.log(window.innerWidth);
@@ -20,8 +20,7 @@ function Nav() {
   return (
     <div style={styles.container}>
       <div>
-        {/* <img src={navLogo} alt="dry john logo" style={styles.logo} /> */}
-        <Image src="/Assets/Images/nav_logo.png" height={60} width={100} />
+        <img src={navLogo} alt="dry john logo" style={styles.logo} />
       </div>
       {!mobile ? (
         <ul style={styles.list}>
@@ -44,11 +43,10 @@ const styles = {
     color: "#3485BC",
     background: "#fff",
     minHeight: "80px",
-    position: "sticky",
+    position: "relative",
     top: "0",
-    maxWidth: "100vw",
+    minWidth: "90vw",
     zIndex: 2,
-    marginBottom: "-50px",
   },
   list: {
     display: "grid",

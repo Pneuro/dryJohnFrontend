@@ -22,7 +22,7 @@ function News({ baseUrl }) {
   }, [lastYPos]);
 
   const styles = {
-    container: {
+    wrapper: {
       color: "#fff",
       backgroundColor: "#3485BC",
       position: "relative",
@@ -32,13 +32,14 @@ function News({ baseUrl }) {
       flexDirection: "column",
       justifyContent: "center",
     },
+
     title: {
       textAlign: "center",
     },
     entries: {
       overflow: "hidden",
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(370px, 1fr))",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
       padding: "1em",
       margin: "1em",
       fontSize: "16px",
@@ -64,7 +65,7 @@ function News({ baseUrl }) {
     },
   };
   return (
-    <div style={styles.container} className="news">
+    <div style={styles.wrapper} className="news">
       <h1 style={styles.title}>Dry John News</h1>
       <div style={styles.entries}>
         <AllPosts baseUrl={baseUrl} />

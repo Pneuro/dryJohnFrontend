@@ -33,17 +33,18 @@ function Header({ setEmail, email }) {
   const styles = {
     container: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr)",
+      gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))",
       alignItems: "center",
       justifyItems: "center",
       margin: "auto",
-      marginTop: "80px",
+      minHeight: "80vh",
     },
     logo: {
       zIndex: 1,
-      maxWidth: "calc(40vw)",
+      width: "calc(50vw - 10%)",
       position: "relative",
       minWidth: "300px",
+      justifySelf: "center",
     },
     headerText: {
       maxWidth: "600px",
@@ -94,12 +95,14 @@ function Header({ setEmail, email }) {
           src="Assets/Videos/LQ_nologo.mp4"
           alt="video"
           autoPlay
+          controls={false}
           muted
           loop
           style={styles.video}
         />
         <div style={styles.headerText}>
           <motion.h1
+            initial={{ opacity: 0 }}
             animate={{ y: [40, 0], opacity: [0, 1] }}
             transition={{ duration: 0.3, delay: 0 }}
             style={styles.h1}
@@ -107,6 +110,7 @@ function Header({ setEmail, email }) {
             We only get one planet, Let's treat her with respect.
           </motion.h1>
           <motion.p
+            initial={{ opacity: 0 }}
             animate={{ y: [40, 0], opacity: [0, 1] }}
             transition={{ duration: 0.3, delay: 0.3 }}
             style={styles.p}
@@ -117,6 +121,7 @@ function Header({ setEmail, email }) {
           {!modal ? (
             <form style={styles.form} onSubmit={openModal}>
               <motion.button
+                initial={{ opacity: 0 }}
                 animate={{ y: [40, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.3, delay: 0.6 }}
                 type="submit"
@@ -130,6 +135,7 @@ function Header({ setEmail, email }) {
           )}
           <form style={styles.form}>
             <motion.button
+              initial={{ opacity: 0 }}
               animate={{ y: [50, 0], opacity: [0, 1] }}
               transition={{ duration: 0.3, delay: 0.9 }}
               type="submit"
@@ -141,10 +147,12 @@ function Header({ setEmail, email }) {
             </motion.button>
           </form>
         </div>
-        <motion.Image
+        <motion.img
+          initial={{ opacity: 0 }}
           src="/Assets/Images/header_logo.png"
           animate={{ y: [100, 0], opacity: [0, 1], rotate: [1800, 0] }}
           transition={{ duration: 0.3, delay: 1.2 }}
+          style={styles.logo}
         />
       </div>
     </main>

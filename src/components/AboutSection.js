@@ -32,7 +32,7 @@ function About() {
     },
     image: {
       maxWidth: "30vw",
-      minWidth: "300px",
+      minWidth: "280px",
       justifySelf: "center",
       borderRadius: "5px",
     },
@@ -97,7 +97,11 @@ function About() {
       </svg>
 
       <div style={styles.container}>
-        <Image src="/Assets/Images/beach_pete.jpg" width={100} height={100} />
+        <img
+          src="/Assets/Images/beach_pete.jpg"
+          alt="Pete Phinney"
+          style={styles.image}
+        />
 
         <div style={styles.text}>
           <motion.p
