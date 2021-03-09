@@ -9,9 +9,9 @@ import News from "./components/News";
 import AboutPage from "./pages/about";
 import About from "./components/AboutSection";
 import Footer from "./components/Footer";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import OrderNow from "./components/OrderNow";
-import BackendPage from "./pages/BackendPage";
+import BackendPage from "./pages/backendPage";
 import ProductPage from "./pages/products";
 import { Helmet } from "react-helmet";
 
