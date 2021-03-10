@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import BlogForm from "../components/BlogForm";
 import AllPosts from "../components/AllPosts";
 import Footer from "../components/Footer";
-const BackendPage = ({ user, logout }) => {
+const backendPage = ({ user, logout }) => {
   const styles = {
     wrapper: {
       marginTop: "100px",
@@ -20,8 +20,8 @@ const BackendPage = ({ user, logout }) => {
   );
 };
 
-BackendPage.propTypes = {
+backendPage.propTypes = {
   user: PropTypes.string,
 };
 
-export default BackendPage;
+export default backendPage;

@@ -6,7 +6,7 @@ import AboutSection from "../components/AboutSection";
 import Reviews from "../components/Testimonials";
 import Footer from "../components/Footer";
 
-function Index() {
+function index() {
   return (
     <div>
       <Nav />
@@ -21,4 +21,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default index;

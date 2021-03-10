@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 import VideoPlayer from "../components/VideoPlayer";
 import Story from "../components/Story";
 
-function About() {
+function about() {
   return (
     <>
       <Nav />
@@ -19,4 +19,4 @@ function About() {
   );
 }
 
-export default About;
+export default about;

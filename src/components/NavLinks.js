@@ -47,7 +47,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
             href="/products"
             style={styles.item}
           >
-            Products
+            Toilet Bags
           </Link>
         </div>
       ) : !navOpen ? (

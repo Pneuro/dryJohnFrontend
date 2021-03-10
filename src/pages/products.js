@@ -6,7 +6,7 @@ import ImageGallery from "react-image-gallery";
 import Footer from "../components/Footer";
 import HowTo from "../components/HowTo";
 
-function ProductPage() {
+function productPage() {
   const tied = "/Assets/Images/SlideshowImages/tiedup.jpg";
   const topDown = "/Assets/Images/SlideshowImages/topdownview.jpg";
   const trashbucket = "/Assets/Images/SlideshowImages/TrashBucket.jpg";
@@ -62,4 +62,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default productPage;
