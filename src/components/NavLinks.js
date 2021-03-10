@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
   console.log(`This is the mobile status:${mobile} and ${navOpen}`);
   const styles = {
@@ -30,31 +30,25 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
     <>
       {!mobile ? (
         <div>
-          <motion.a
-            animate={{ opacity: [0, 1], y: [10, 0] }}
-            transition={{ delay: 0.1 }}
-            href="/index"
-            exact
-            style={styles.item}
-          >
+          <Link href="/" style={styles.item}>
             Home
-          </motion.a>
-          <motion.a
+          </Link>
+          <Link
             animate={{ opacity: [0, 1], y: [10, 0] }}
             transition={{ delay: 0.2 }}
             href="/about"
             style={styles.item}
           >
             About
-          </motion.a>
-          <motion.a
+          </Link>
+          <Link
             animate={{ opacity: [0, 1], y: [10, 0] }}
             transition={{ delay: 0.3 }}
             href="/products"
             style={styles.item}
           >
             Products
-          </motion.a>
+          </Link>
         </div>
       ) : !navOpen ? (
         <div style={styles.list}>
