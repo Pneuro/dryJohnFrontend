@@ -31,23 +31,47 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
       {!mobile ? (
         <div>
           <Link href="/" style={styles.item}>
-            Home
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              transition={{ delay: 0.2 }}
+              href="/"
+              exact
+              style={styles.item}
+            >
+              Home
+            </motion.a>
+          </Link>
+          <Link href="/about" style={styles.item}>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              transition={{ delay: 0.2 }}
+              href="/"
+              exact
+              style={styles.item}
+            >
+              About
+            </motion.a>
           </Link>
           <Link
-            animate={{ opacity: [0, 1], y: [10, 0] }}
-            transition={{ delay: 0.2 }}
-            href="/about"
-            style={styles.item}
-          >
-            About
-          </Link>
-          <Link
+            initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1], y: [10, 0] }}
             transition={{ delay: 0.3 }}
             href="/products"
             style={styles.item}
-          >
-            Toilet Bag
+            >
+            <motion.a
+            initial={{ opacity: 0 }}
+              
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              transition={{ delay: 0.2 }}
+              href="/"
+              exact
+              style={styles.item}
+            >
+              Products
+            </motion.a>
           </Link>
         </div>
       ) : !navOpen ? (
