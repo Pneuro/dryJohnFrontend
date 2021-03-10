@@ -13,6 +13,7 @@ const HowTo = () => {
       display: "grid",
       justifyContent: "center",
       gap: "1em",
+      padding: '100px 0'
     },
     step: {
       display: "grid",
@@ -42,12 +43,12 @@ const HowTo = () => {
           <p style={styles.paragraph}>
             Step One: Place the bag inside 5 gallon or smaller container
           </p>
-          <Image width={200} height={100} src={imageOne1} />
+          <img style={styles.image} src={imageOne1} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>Step Two: Untie/Open it</p>
-          <Image width={200} height={100} src={imageOne1} />
+          <img style={styles.image} src={imageTwo} />
         </div>
 
         <div style={styles.step}>
@@ -56,31 +57,31 @@ const HowTo = () => {
             or turn into transportable solid within one hour after use,
             dimishing spilling or leakage
           </p>
-          <Image width={200} height={100} src={imageOne1} />
+          <img style={styles.image} src={imageThree} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Four: Dispose of properly in a trash container.
           </p>
-          <Image width={200} height={100} src={imageOne1} />
+          <img style={styles.image} src={imageFour} />
         </div>
 
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Five: Place the bag inside 5 gallon or smaller container
           </p>
-          <Image width={200} height={100} src={imageOne1} />
+          <img style={styles.image} src={imageFive} />
         </div>
         <div style={styles.step}>
           <p style={styles.paragraph}>Step Six: Hit the target</p>
-          <Image width={200} height={100} src={imageOne1} />
+          <img style={styles.image} src={imageSix} />
         </div>
         <div style={styles.step}>
           <p style={styles.paragraph}>
             Step Seven: Clean up the mess in an eco-friendly way!
           </p>
-          <Image width={200} height={100} src={imageOne1} />
+          <img style={styles.image} src={imageSeven} />
         </div>
       </section>
     </div>

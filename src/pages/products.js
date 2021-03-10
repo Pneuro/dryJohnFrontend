@@ -26,24 +26,20 @@ function productPage() {
     {
       original: topDown,
       thumbnail: topDown,
-      description: "1 The easiest way to transport human waste out of nature.",
+      description: "2 The easiest way to transport human waste out of nature.",
     },
     {
       original: trashbucket,
       thumbnail: trashbucket,
-      description: "1 The easiest way to transport human waste out of nature.",
+      description: "3 The easiest way to transport human waste out of nature.",
     },
 
     {
       original: imageThree,
       thumbnail: imageThreeThumb,
-      description: "Easy",
+      description: "4 Easy",
     },
-    {
-      original: imageFour,
-      thumbnail: imageFourThumb,
-      description: "4 The easiest way to transport human waste out of nature.",
-    },
+    
     {
       original: imageFive,
       thumbnail: imageFiveThumb,

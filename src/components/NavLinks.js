@@ -30,10 +30,10 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
     <>
       {!mobile ? (
         <div>
-          <Link href="/" style={styles.item}>
+          <Link href="/" exact style={styles.item}>
             <motion.a
               initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1], y: [10, 0] }}
+              animate={{ opacity: [0, 1], y: [100, 0] }}
               transition={{ delay: 0.2 }}
               href="/"
               exact
@@ -60,10 +60,9 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
             transition={{ delay: 0.3 }}
             href="/products"
             style={styles.item}
-            >
+          >
             <motion.a
-            initial={{ opacity: 0 }}
-              
+              initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [10, 0] }}
               transition={{ delay: 0.2 }}
               href="/"
