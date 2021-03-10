@@ -33,7 +33,7 @@ function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
           <motion.a
             animate={{ opacity: [0, 1], y: [10, 0] }}
             transition={{ delay: 0.1 }}
-            href="/"
+            href="/index"
             exact
             style={styles.item}
           >
