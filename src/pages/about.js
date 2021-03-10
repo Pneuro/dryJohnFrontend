@@ -6,14 +6,13 @@ import VideoPlayer from "../components/VideoPlayer";
 import Story from "../components/Story";
 
 function About() {
-
   return (
     <>
       <Nav />
-      
+
       <AboutHeader />
       <Story />
-      
+
       <VideoPlayer />
       <Footer />
     </>

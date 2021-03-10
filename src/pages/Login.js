@@ -14,10 +14,10 @@ function Login({ setLoggedIn }) {
       res
         .json()
         .then((res) => {
-          console.log(res.data)
+          console.log(res.data);
           if (res.data === "pete@dryjohn.com") {
             console.log(res);
-            setLoggedIn(true)
+            setLoggedIn(true);
           } else {
             console.log(res);
           }
