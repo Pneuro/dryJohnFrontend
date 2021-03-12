@@ -1,36 +1,12 @@
 import { useState } from "react";
 
-function Login({ setLoggedIn }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const emailUpdate = (e) => setEmail(e.target.value);
-  const passwordUpdate = (e) => setPassword(e.target.value);
-  const data = [email, password];
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch("/login", headers).then((res) =>
-      res
-        .json()
-        .then((res) => {
-          console.log(res.data);
-          if (res.data === "pete@dryjohn.com") {
-            console.log(res);
-            setLoggedIn(true);
-          } else {
-            console.log(res);
-          }
-        })
-        .catch((err) => console.error(err))
-    );
-  };
-  const headers = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  };
-
+function Login({
+  setLoggedIn,
+  handleSubmit,
+  
+  emailUpdate,
+  passwordUpdate,
+}) {
   const styles = {
     wrapper: {
       display: "flex",

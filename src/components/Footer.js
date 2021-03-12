@@ -39,7 +39,7 @@ function Footer() {
         </ul>
         <ul>
           <h3>Administration</h3>
-          <a style={styles.item} href="/login" exact style={styles.item}>
+          <a style={styles.item} href="/admin" exact style={styles.item}>
             Login
           </a>
         </ul>
