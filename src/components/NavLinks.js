@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-function NavLinks({ fontSize, setFontSize, mobile, navOpen }) {
-  console.log(`This is the mobile status:${mobile} and ${navOpen}`);
+function NavLinks({ fontSize, mobile, navOpen }) {
   const styles = {
     item: {
       color: "#3485bc",

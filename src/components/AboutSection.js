@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
 
 function About() {
   const styles = {
@@ -35,6 +35,10 @@ function About() {
       minWidth: "280px",
       justifySelf: "center",
       borderRadius: "5px",
+    },
+    link: {
+      textDecoration: "none",
+      color: "#fff",
     },
   };
 
@@ -107,37 +111,24 @@ function About() {
           <motion.p
             animate={{ y: [40, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5, delay: 0.1 }}
+            style={{ maxWidth: "100vw", fontSize: "1.5em" }}
           >
-            Pete Phinney
+            "I try and live what I say. I want the world to be a less polluted
+            place. That’s a tall order. But if more of us do just a little bit
+            more I believe we can make a noticeable difference. I take joy in
+            knowing that for every Dry John toilet bag used, there is one less
+            dose of human waste on the ground or in the water. Thank you so much
+            for pitching in and helping make a difference! Sincerely, Pete
+            Phinney" - founder of Dry John, LLC
           </motion.p>
-          <motion.p
-            animate={{ y: [40, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            style={styles.p}
-          >
-            Product Designer / CEO at Dry John
-          </motion.p>
-          <motion.p
-            animate={{ y: [40, 0], opacity: [0, 1] }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            I love this planet, let's keep it clean and healthy! - Pete Phinney
-          </motion.p>
-          <a href="https://www.instagram.com/dry.john/">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="26.893"
-              height="26.884"
-              viewBox="0 0 26.893 26.884"
-            >
-              <path
-                id="instagram-filled"
-                d="M16.251,13.756A2.65,2.65,0,1,0,13.6,16.395,2.647,2.647,0,0,0,16.251,13.756ZM20.188.022H6.737A6.714,6.714,0,0,0,.016,6.713V8.578h9.89a6.384,6.384,0,0,1,7.389,0h9.614V6.713A6.713,6.713,0,0,0,20.188.022ZM22.91,6.386a.747.747,0,0,1-.747.743H19.855a.748.748,0,0,1-.747-.743v-2.3a.747.747,0,0,1,.747-.743h2.307a.747.747,0,0,1,.747.743Zm-2.926,7.37a6.384,6.384,0,0,1-12.768,0,6.3,6.3,0,0,1,.606-2.7H.016v9.158a6.713,6.713,0,0,0,6.721,6.691H20.188a6.714,6.714,0,0,0,6.721-6.691V11.056H19.377a6.3,6.3,0,0,1,.606,2.7Z"
-                transform="translate(-0.016 -0.022)"
-                fill="#3485bc"
-              />
-            </svg>
-          </a>
+          <div>
+            <a href="https://www.instagram.com/dry.john/">
+              <FaInstagram style={styles.link} size={"2em"} />
+            </a>
+            <a href="https://www.instagram.com/dry.john/">
+              <FaFacebook style={styles.link} size={"2em"} />
+            </a>
+          </div>
         </div>
       </div>
     </div>

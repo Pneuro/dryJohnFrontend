@@ -95,6 +95,7 @@ function Header({ setEmail, email }) {
           src="Assets/Videos/LQ_nologo.mp4"
           alt="video"
           autoPlay
+          playsInline
           controls={false}
           muted
           loop

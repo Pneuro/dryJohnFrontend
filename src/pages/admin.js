@@ -10,13 +10,19 @@ const backendPage = ({ user, logout }) => {
     },
   };
   return (
-    <div style={styles.wrapper}>
-      <h1>Welcome, {user}</h1>
-      <button onClick={() => logout()}>Logout</button>
-      <BlogForm />
-      <AllPosts showControls={true} />
-      <Footer />
-    </div>
+    <>
+      {!login ? (
+        <div style={styles.wrapper}>
+          <h1>Welcome, {user}</h1>
+          <button onClick={() => logout()}>Logout</button>
+          <BlogForm />
+          <AllPosts showControls={true} />
+          <Footer />
+        </div>
+      ) : (
+        <Login />
+      )}
+    </>
   );
 };
 

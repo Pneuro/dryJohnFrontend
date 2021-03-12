@@ -3,13 +3,19 @@ import Image from "next/image";
 function Footer() {
   return (
     <footer style={styles.container}>
-
-
-      <img src="/Assets/Images/logo.png" alt="footer logo" style={styles.logo}/>
+      <img
+        src="/Assets/Images/logo.png"
+        alt="footer logo"
+        style={styles.logo}
+      />
       <div style={styles.list}>
         <ul>
           <h3>About</h3>
-          <li style={styles.listItem}>Information</li>
+          <li style={styles.listItem}>
+            <a style={styles.item} href="/about">
+              More Information
+            </a>
+          </li>
         </ul>
         <ul>
           <h3>Product</h3>
@@ -19,13 +25,21 @@ function Footer() {
         </ul>
         <ul>
           <h3>Contact</h3>
-          <li>Information</li>
+          <li style={styles.listItem}>
+            <a style={styles.item} href="#">
+              Phone
+            </a>
+          </li>
 
-          <li>Information</li>
+          <li style={styles.listItem}>
+            <a style={styles.item} href="#">
+              Email
+            </a>
+          </li>
         </ul>
         <ul>
           <h3>Administration</h3>
-          <a href="/admin/login" exact style={styles.item}>
+          <a style={styles.item} href="/login" exact style={styles.item}>
             Login
           </a>
         </ul>
@@ -62,7 +76,9 @@ const styles = {
     textDecoration: "none",
     color: "#fff",
   },
-  listItem: {},
+  listItem: {
+    listStyle: "none",
+  },
   list: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",

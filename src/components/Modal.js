@@ -15,11 +15,12 @@ function Modal({ setModal }) {
   const data = [name, email, phone, message];
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("/contact", headers).then((res) =>
-      res
-        .json()
-        .then((res) => console.log(res))
-        .catch((err) => console.error(err))
+    fetch("https://dry-john-backend.herokuapp.com/contact", headers).then(
+      (res) =>
+        res
+          .json()
+          .then((res) => console.log(res))
+          .catch((err) => console.error(err))
     );
 
     setContactSent(true);
