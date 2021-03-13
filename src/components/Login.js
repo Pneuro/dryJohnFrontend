@@ -1,9 +1,6 @@
-
-
 function Login({
-  setLoggedIn,
   handleSubmit,
-  
+
   emailUpdate,
   passwordUpdate,
 }) {
