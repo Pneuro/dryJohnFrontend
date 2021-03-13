@@ -13,7 +13,7 @@ const HowTo = () => {
       display: "grid",
       justifyContent: "center",
       gap: "1em",
-      padding: '100px 0'
+      padding: "100px 0",
     },
     step: {
       display: "grid",
@@ -65,23 +65,6 @@ const HowTo = () => {
             Step Four: Dispose of properly in a trash container.
           </p>
           <img style={styles.image} src={imageFour} />
-        </div>
-
-        <div style={styles.step}>
-          <p style={styles.paragraph}>
-            Step Five: Place the bag inside 5 gallon or smaller container
-          </p>
-          <img style={styles.image} src={imageFive} />
-        </div>
-        <div style={styles.step}>
-          <p style={styles.paragraph}>Step Six: Hit the target</p>
-          <img style={styles.image} src={imageSix} />
-        </div>
-        <div style={styles.step}>
-          <p style={styles.paragraph}>
-            Step Seven: Clean up the mess in an eco-friendly way!
-          </p>
-          <img style={styles.image} src={imageSeven} />
         </div>
       </section>
     </div>

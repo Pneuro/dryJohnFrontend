@@ -3,7 +3,7 @@ import React from "react";
 function OfferingHand() {
   const styles = {
     hand: {
-      maxWidth: "100vw",
+      maxWidth: "50vw",
     },
   };
   return (
