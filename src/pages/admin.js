@@ -4,7 +4,7 @@ import BlogForm from "../components/BlogForm";
 import AllPosts from "../components/AllPosts";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import Login from "../components/login";
+import Login from "../components/Login";
 const backendPage = ({ user, logout }) => {
   const [login, setLogin] = useState(false);
   const [email, setEmail] = useState("");
