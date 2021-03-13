@@ -16,13 +16,13 @@ const backendPage = ({ user, logout }) => {
   const data = [email, password];
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(data)
+    console.log(data);
     fetch("https://dry-john-backend.herokuapp.com/login", headers).then((res) =>
       res
         .json()
         .then((res) => {
           console.log(res.data);
-          if (res.data === "pete@dryjohn.com") {
+          if (res === 200) {
             console.log(res);
             setLogin(true);
           } else {
