@@ -32,8 +32,9 @@ function AboutHeader() {
         <motion.p
           animate={{ y: [25, 0], duration: 0.3, opacity: [0, 1], delay: 0.5 }}
         >
-          Compostable toilet bags suited for camping, traveling, cross-country
-          trips, hiking, biking, and other time where nature may call.
+          Compostable toilet bags containing natural media to help soak up and
+          solidify human waste.  Solid waste is much easier to transport out of
+          nature and to the trash.
         </motion.p>
       </div>
     </div>

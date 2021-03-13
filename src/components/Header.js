@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import Image from "next/image";
+import Link from "next/link";
 
 import Modal from "./Modal";
 
@@ -68,6 +68,7 @@ function Header({ setEmail, email }) {
     link: {
       color: "#fff",
       textDecoration: "none",
+      
     },
     input: {
       height: "25px",
@@ -142,9 +143,12 @@ function Header({ setEmail, email }) {
               type="submit"
               className="button"
             >
-              <a style={styles.link} to="/order">
+              <Link
+                style={styles.link}
+                href="https://www.amazon.com/Portable-Toilet-Bags-Compostable-Absorbent/dp/B078X3TCRG/ref=sr_1_2?crid=2RZVRI2TQJG7P&dchild=1&keywords=dry+john+toilet+bags&qid=1613490708&sprefix=dry+john%2Caps%2C174&sr=8-2"
+              >
                 Order Now
-              </a>
+              </Link>
             </motion.button>
           </form>
         </div>
