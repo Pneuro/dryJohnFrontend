@@ -5,7 +5,7 @@ export default function CoverImage({ title, url, slug }) {
   const image = (
     <img
       src={url}
-      style={{ maxWidth: "300px" }}
+      style={{ maxWidth: "100%" }}
       alt={`Cover Image for ${title}`}
       className={cn("shadow-small", {
         "hover:shadow-medium transition-shadow duration-200": slug,
