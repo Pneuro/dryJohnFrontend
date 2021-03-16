@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { RichText } from "prismic-reactjs";
-import Avatar from "../components/avatar";
+import Avatar from "../components/Avatar";
 import Date from "../components/date";
 import CoverImage from "../components/cover-image";
 
