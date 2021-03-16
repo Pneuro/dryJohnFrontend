@@ -45,27 +45,13 @@ const backendPage = ({ user, logout }) => {
   };
   return (
     <>
-      {login ? (
-        <div style={styles.wrapper}>
-          <h1>Welcome, {user}</h1>
-          <button onClick={() => logout()}>Logout</button>
-          <BlogForm />
-          <AllPosts showControls={true} />
-          <Footer />
-        </div>
-      ) : (
-        <>
-          <Login
-            handleSubmit={handleSubmit}
-            email={email}
-            password={password}
-            setEmail={setEmail}
-            setPassword={setPassword}
-            emailUpdate={emailUpdate}
-            passwordUpdate={passwordUpdate}
-          />
-        </>
-      )}
+      <div style={styles.wrapper}>
+        <h1>Welcome, {user}</h1>
+        <button onClick={() => logout()}>Logout</button>
+        <BlogForm />
+        <AllPosts />
+        <Footer />
+      </div>
     </>
   );
 };

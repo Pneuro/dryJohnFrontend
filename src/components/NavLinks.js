@@ -30,12 +30,12 @@ function NavLinks({ fontSize, mobile, navOpen }) {
     <>
       {!mobile ? (
         <div>
-          <Link href="/" exact style={styles.item}>
+          <Link href="/" exact="true" style={styles.item}>
             <motion.a
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [100, 0] }}
               transition={{ delay: 0.2 }}
-              exact={true}
+              exact="true"
               style={styles.item}
             >
               Home
@@ -70,12 +70,12 @@ function NavLinks({ fontSize, mobile, navOpen }) {
         </div>
       ) : !navOpen ? (
         <div style={styles.list}>
-          <Link href="/" exact style={styles.item}>
+          <Link href="/" exact="true" style={styles.item}>
             <motion.a
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [100, 0] }}
               transition={{ delay: 0.2 }}
-              exact={true}
+              exact="true"
               style={styles.item}
             >
               Home

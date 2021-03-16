@@ -5,7 +5,7 @@ import News from "../components/News";
 import AboutSection from "../components/AboutSection";
 import Reviews from "../components/Testimonials";
 import Footer from "../components/Footer";
-import HeroPost from "../components/HeroPost";
+
 import Head from "next/head";
 import { getAllPostsForHome } from "../lib/api";
 
@@ -31,7 +31,7 @@ function index({ preview, allPosts }) {
       <Nav />
       <Header />
       <Scene />
-      <News heroPost={heroPost} />
+      <News heroPost={heroPost} preview={preview} />
 
       <AboutSection />
       <Reviews />

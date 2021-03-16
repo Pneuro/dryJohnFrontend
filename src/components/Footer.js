@@ -1,5 +1,3 @@
-
-
 function Footer() {
   return (
     <footer style={styles.container}>
@@ -12,7 +10,7 @@ function Footer() {
         <ul>
           <h3>About</h3>
           <li style={styles.listItem}>
-            <a style={styles.item} href="/about">
+            <a style={styles.item} href="/about#info">
               More Information
             </a>
           </li>
@@ -26,13 +24,13 @@ function Footer() {
         <ul>
           <h3>Contact</h3>
           <li style={styles.listItem}>
-            <a style={styles.item} href="#">
+            <a style={styles.item} href="tel:+14191233231">
               Phone
             </a>
           </li>
 
           <li style={styles.listItem}>
-            <a style={styles.item} href="#">
+            <a style={styles.item} href="mailto:dryjohn@gmail.com">
               Email
             </a>
           </li>

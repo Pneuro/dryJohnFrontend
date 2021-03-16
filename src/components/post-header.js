@@ -6,7 +6,7 @@ import PostTitle from "../components/post-title";
 
 export default function PostHeader({ title, coverImage, date, author }) {
   return (
-    <>
+    <article style={styles.wrapper}>
       <PostTitle>{title[0].text}</PostTitle>
       <div style={{ margin: "auto", maxWidth: "500px" }}>
         {author && <Avatar name={author.name} picture={author.picture} />}
@@ -22,6 +22,13 @@ export default function PostHeader({ title, coverImage, date, author }) {
           <Date dateString={date} />
         </div>
       </div>
-    </>
+    </article>
   );
 }
+
+const styles = {
+  wrapper: {
+    maxWidth: "500px",
+    margin: "auto",
+  },
+};

@@ -1,27 +1,7 @@
 import { useState, useEffect } from "react";
-import AllPosts from "./AllPosts";
 import HeroPost from "./HeroPost";
 
 function News({ heroPost }) {
-  const [lastYPos, setLastYPos] = useState(0);
-  const [shouldShowActions, setShouldShowActions] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const yPos = window.scrollY;
-      const isScrollingUp = yPos < lastYPos;
-
-      setShouldShowActions(isScrollingUp);
-      setLastYPos(yPos);
-    }
-
-    window.addEventListener("scroll", handleScroll, false);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll, false);
-    };
-  }, [lastYPos]);
-
   const styles = {
     wrapper: {
       color: "#fff",
@@ -29,6 +9,7 @@ function News({ heroPost }) {
       position: "relative",
       zIndex: 1,
       minHeight: "80vh",
+
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -40,9 +21,10 @@ function News({ heroPost }) {
     entries: {
       overflow: "hidden",
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gridTemplateColumsn: "1fr",
+      maxWidth: "500px",
       padding: "1em",
-      margin: "1em",
+      margin: "auto",
       fontSize: "16px",
     },
     entry: {

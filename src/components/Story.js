@@ -18,7 +18,7 @@ function Story(props) {
   };
 
   return (
-    <div style={styles.wrapper}>
+    <div id="info" style={styles.wrapper}>
       <h1>The Dry John Story</h1>
       <div style={styles.container}>
         <p>
