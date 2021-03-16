@@ -1,42 +1,24 @@
 import { useEffect, useState } from "react";
+import Prismic from "@prismicio/client";
+import { Date, Link, RichText } from "prismic-reactjs";
+import { Client } from "../prismic-configuration.js";
 
-function AllPosts({ showControls, baseUrl }) {
-  const [posts, setPosts] = useState([
-    {
-      id: 419,
-      title: "This is a template",
-      body: "Template is a body",
-      image: "",
-    },
-  ]);
+function AllPosts({ showControls }) {
+  const [posts, setPosts] = useState([{ id: 1 }, { id: 2 }]);
 
-  useEffect(() => {
-    fetch(`${baseUrl}/get_posts`)
-      .then((res) => res.json())
-      .then((res) => setPosts(res))
-      .catch((err) => console.error(err));
-  }, [baseUrl]);
-  const handleEdit = (e) => {
-    fetch(`/edit/${e}`)
-      .then((res) => res.json())
-      .then((res) => console.log(res));
-  };
-  const handleDelete = (e) => {
-    fetch(`${baseUrl}/delete/${e}`);
-    console.log(e);
-  };
-  const styles = {
-    post: {
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-      gap: "1em",
-      wordBreak: "keep-all",
-    },
-    article: {
-      maxWidth: "500px",
-    },
-  };
 
+  // Link Resolver
+  function linkResolver(posts) {
+    // Define the url depending on the postsument type
+    if (posts.type === "page") {
+      return "/page/" + posts.uid;
+    } else if (posts.type === "blog_post") {
+      return "/blog/" + posts.uid;
+    }
+
+    // Default to homepage
+    return "/";
+  }
   return (
     <div style={styles.post}>
       {posts.map((post) => (
@@ -57,10 +39,34 @@ function AllPosts({ showControls, baseUrl }) {
     </div>
   );
 }
+export async function getStaticProps({params}) {
+  const client = Client();
+  const doc = await client.getByUID('page', params.uid)
 
+  return {
+    props: {
+      doc,
+    },
+  }
+}
+const styles = {
+  post: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+    gap: "1em",
+    wordBreak: "keep-all",
+  },
+  article: {
+    maxWidth: "500px",
+  },
+};
+
+export async function getStaticPaths() {
+  return {
+    // You can run a separate query here to get dynamic parameters from your documents.
+    paths: [{ params: { uid: "1" } }, { params: { uid: "2" } }],
+    fallback: true,
+  };
+}
 export default AllPosts;
 
-AllPosts.defaultProps = {
-  showControls: false,
-  baseUrl: "",
-};

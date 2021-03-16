@@ -5,8 +5,15 @@ import News from "../components/News";
 import AboutSection from "../components/AboutSection";
 import Reviews from "../components/Testimonials";
 import Footer from "../components/Footer";
+import HeroPost from "../components/HeroPost";
 import Head from "next/head";
-function index() {
+import { getAllPostsForHome } from "../lib/api";
+
+import { CMS_NAME } from "../lib/constants";
+function index({ preview, allPosts }) {
+  const heroPost = allPosts[0].node;
+  
+  const morePosts = allPosts.slice(1);
   return (
     <div>
       <Head>
@@ -24,7 +31,7 @@ function index() {
       <Nav />
       <Header />
       <Scene />
-      <News />
+      <News heroPost={heroPost} />
 
       <AboutSection />
       <Reviews />
@@ -34,3 +41,10 @@ function index() {
 }
 
 export default index;
+
+export async function getStaticProps({ preview = false, previewData }) {
+  const allPosts = await getAllPostsForHome(previewData);
+  return {
+    props: { preview, allPosts },
+  };
+}

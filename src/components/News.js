@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import AllPosts from "./AllPosts";
+import HeroPost from "./HeroPost";
 
-function News({ baseUrl }) {
+function News({ heroPost }) {
   const [lastYPos, setLastYPos] = useState(0);
   const [shouldShowActions, setShouldShowActions] = useState(false);
 
@@ -54,10 +55,6 @@ function News({ baseUrl }) {
     fish: {
       position: "relative",
       padding: "1em",
-      margin: "1em",
-      width: "100%",
-      transform: "translateX(300px)",
-      zIndex: 2,
     },
     entryImage: {
       width: "100%",
@@ -68,7 +65,14 @@ function News({ baseUrl }) {
     <div style={styles.wrapper} className="news">
       <h1 style={styles.title}>Dry John News</h1>
       <div style={styles.entries}>
-        <AllPosts baseUrl={baseUrl} />
+        <HeroPost
+          title={heroPost.title}
+          coverImage={heroPost.coverimage}
+          date={heroPost.date}
+          author={heroPost.author}
+          slug={heroPost._meta.uid}
+          excerpt={heroPost.excerpt}
+        />
       </div>
     </div>
   );
