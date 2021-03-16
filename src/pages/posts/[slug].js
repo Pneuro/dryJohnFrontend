@@ -33,6 +33,7 @@ export default function Post({ post, morePosts, preview }) {
               </title>
               <meta property="og:image" content={post.coverimage.url} />
             </Head>
+            <Header />
             <PostHeader
               title={post.title}
               coverImage={post.coverimage}

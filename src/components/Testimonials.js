@@ -63,7 +63,7 @@ function Reviews() {
       <h1>Testimonials</h1>
       <div style={styles.container}>
         {data.map((review) => (
-          <div style={styles.testimonial}>
+          <div key={review.id} style={styles.testimonial}>
             <h1>{review.title}</h1>
             <p>
               {star}

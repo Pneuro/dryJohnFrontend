@@ -9,6 +9,7 @@ function NavLinks({ fontSize, mobile, navOpen }) {
       padding: "1em",
       fontSize: fontSize,
       fontWeight: "bold",
+      cursor: "pointer",
     },
     list: {
       display: "flex",
@@ -34,8 +35,7 @@ function NavLinks({ fontSize, mobile, navOpen }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [100, 0] }}
               transition={{ delay: 0.2 }}
-              href="/"
-              exact
+              exact={true}
               style={styles.item}
             >
               Home
@@ -46,8 +46,6 @@ function NavLinks({ fontSize, mobile, navOpen }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [10, 0] }}
               transition={{ delay: 0.2 }}
-              href="/"
-              exact
               style={styles.item}
             >
               About
@@ -64,8 +62,6 @@ function NavLinks({ fontSize, mobile, navOpen }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [10, 0] }}
               transition={{ delay: 0.2 }}
-              href="/"
-              exact
               style={styles.item}
             >
               Products
@@ -74,15 +70,40 @@ function NavLinks({ fontSize, mobile, navOpen }) {
         </div>
       ) : !navOpen ? (
         <div style={styles.list}>
-          <a href="/" exact style={styles.item}>
-            Home
-          </a>
-          <a href="/about" style={styles.item}>
-            About
-          </a>
-          <a href="/products" style={styles.item}>
-            Products
-          </a>
+          <Link href="/" exact style={styles.item}>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1], y: [100, 0] }}
+              transition={{ delay: 0.2 }}
+              exact={true}
+              style={styles.item}
+            >
+              Home
+            </motion.a>
+          </Link>
+          <Link href="/about" style={styles.item}>
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              style={styles.item}
+            >
+              About
+            </motion.a>
+          </Link>
+          <Link
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0, 1], y: [10, 0] }}
+            href="/products"
+            style={styles.item}
+          >
+            <motion.a
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1], y: [10, 0] }}
+              style={styles.item}
+            >
+              Products
+            </motion.a>
+          </Link>
         </div>
       ) : (
         ""
