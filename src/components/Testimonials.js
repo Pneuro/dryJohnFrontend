@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 function Reviews() {
   const [data, setReviews] = useState([
     {
-      id: "RBMUHEO1JRPY2",
+      id: "1",
       asin: { original: "B078X3TCRG", variant: "" },
       review_data: "Reviewed in the United States on July 2, 2020",
       date: { date: "July 2, 2020", unix: 1593655200 },
@@ -16,7 +16,7 @@ function Reviews() {
       verified_purchase: true,
     },
     {
-      id: "RBMUHEO2JRPY2",
+      id: "2",
       asin: { original: "B078X3TCRG", variant: "" },
       review_data: "Reviewed in the United States on July 2, 2020",
       date: { date: "February 8, 2018", unix: 1593655200 },
@@ -28,7 +28,7 @@ function Reviews() {
       verified_purchase: true,
     },
     {
-      id: "RBMTHEO1JRPY2",
+      id: "3",
       asin: { original: "B078X3TCRG", variant: "" },
       review_data: "Reviewed in the United States on December 24, 2019",
       date: { date: "December 24, 2019", unix: 1593655200 },
