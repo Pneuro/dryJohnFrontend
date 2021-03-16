@@ -1,6 +1,6 @@
 import Prismic from "prismic-javascript";
 
-const REPOSITORY = "dry-john.cdn";
+const REPOSITORY = process.env.PRISMIC_REPOSITORY_NAME;
 const REF_API_URL = `https://${REPOSITORY}.prismic.io/api/v2`;
 const GRAPHQL_API_URL = `https://${REPOSITORY}.prismic.io/graphql`;
 export const API_URL = `https://${REPOSITORY}.prismic.io/api/v2`;
@@ -27,7 +27,7 @@ async function fetchAPI(query, { previewData, variables } = {}) {
 
   if (res.status !== 200) {
     console.log(await res.text());
-    throw new Error("Failed to fetch API");
+    throw new Error("Failed to fetch API dude");
   }
 
   const json = await res.json();
