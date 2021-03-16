@@ -44,6 +44,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }, 
-  "cacheDirectories" : [".next/cache"]
+  },
+  "cacheDirectories": [
+    ".next/cache"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  }
 }
