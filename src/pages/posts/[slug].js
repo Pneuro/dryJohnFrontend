@@ -3,7 +3,7 @@ import Head from "next/head";
 import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
 import MoreStories from "../../components/more-stories";
-import Header from "../../components/header";
+import Header from "../../components/Header";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 
