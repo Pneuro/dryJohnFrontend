@@ -2,6 +2,10 @@
   "name": "dryjohn",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=v12.18.3",
+    "npm": ">=6.14.6"
+  },
   "dependencies": {
     "@prismicio/client": "^4.0.0",
     "@testing-library/jest-dom": "^5.11.9",
@@ -47,9 +51,6 @@
   },
   "cacheDirectories": [
     ".next/cache"
-  ],
-  "engines": {
-    "node": ">=v12.18.3",
-    "npm": ">=6.14.6"
-  }
+  ]
+
 }
