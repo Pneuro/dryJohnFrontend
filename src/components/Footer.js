@@ -60,7 +60,7 @@ const styles = {
     justifyContent: "center",
     position: "relative",
     zIndex: 1,
-
+    
     border: "#ddd 1px solid",
 
     background:

@@ -12,6 +12,6 @@ export default function Avatar({ name, picture }) {
   );
 }
 Avatar.defaultProps = {
-  name: "Pete",
+  name: "Pete Phinney",
   picture: "",
 };

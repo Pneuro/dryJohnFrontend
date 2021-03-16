@@ -35,7 +35,6 @@ function NavLinks({ fontSize, mobile, navOpen }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [100, 0] }}
               transition={{ delay: 0.2 }}
-              exact="true"
               style={styles.item}
             >
               Home
@@ -75,7 +74,6 @@ function NavLinks({ fontSize, mobile, navOpen }) {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1], y: [100, 0] }}
               transition={{ delay: 0.2 }}
-              exact="true"
               style={styles.item}
             >
               Home

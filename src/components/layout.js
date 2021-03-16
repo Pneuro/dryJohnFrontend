@@ -6,7 +6,7 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
+      <div style={{ background: "#8dc84a" }}>
         <Alert preview={preview} />
         <main>{children}</main>
       </div>

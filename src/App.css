@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 
 :root {
@@ -18,7 +19,9 @@
   --sky: #7dcdd6;
   --green: #8dc84a;
 }
-
+body {
+  background: var(--green);
+}
 .button {
   background: linear-gradient(
     82deg,
