@@ -4,13 +4,13 @@ import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
 import MoreStories from "../../components/more-stories";
-import Header from "../../components/Header";
+
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
-import { CMS_NAME } from "../../lib/constants";
+
 import Nav from "../../components/Nav";
 
 export default function Post({ post, morePosts, preview }) {
