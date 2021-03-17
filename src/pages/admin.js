@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import BlogForm from "../components/BlogForm";
+
 import AllPosts from "../components/AllPosts";
 import { useState } from "react";
 import Footer from "../components/Footer";
-import Login from "../components/Login";
+
 const backendPage = ({ user, logout }) => {
-  const [login, setLogin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -48,7 +47,7 @@ const backendPage = ({ user, logout }) => {
       <div style={styles.wrapper}>
         <h1>Welcome, {user}</h1>
         <button onClick={() => logout()}>Logout</button>
-        <BlogForm />
+
         <AllPosts />
         <Footer />
       </div>
