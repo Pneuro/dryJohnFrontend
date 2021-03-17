@@ -27,7 +27,8 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build"
+    "build": "next build"
+    
   },
   "eslintConfig": {
     "extends": [
