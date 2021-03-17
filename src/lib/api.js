@@ -1,10 +1,10 @@
 import Prismic from "prismic-javascript";
 
-const REPOSITORY = process.env.PRISMIC_REPOSITORY_NAME;
+const REPOSITORY = "dry-john.cdn";
 const REF_API_URL = `https://${REPOSITORY}.prismic.io/api/v2`;
 const GRAPHQL_API_URL = `https://${REPOSITORY}.prismic.io/graphql`;
 // export const API_URL = 'https://your-repo-name.cdn.prismic.io/api/v2'
-export const API_TOKEN = process.env.PRISMIC_API_TOKEN;
+export const API_TOKEN = "MC5ZRTlWNmhJQUFDWUFyQWM5.Te-_ve-_vTPvv73vv71OB--_ve-_ve-_vVPvv73vv71F77-977-9RX4777-977-977-977-977-9NO-_vUYaBgPvv70";
 export const API_LOCALE = process.env.PRISMIC_REPOSITORY_LOCALE;
 
 export const PrismicClient = Prismic.client(REF_API_URL, {
