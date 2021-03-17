@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 import { getAllPostsForHome } from "../lib/api";
 
-import { CMS_NAME } from "../lib/constants";
 function index({ preview, allPosts }) {
   const heroPost = allPosts[0].node;
 
@@ -31,7 +30,7 @@ function index({ preview, allPosts }) {
       <Nav />
       <Header />
       <Scene />
-      <News heroPost={heroPost} preview={preview} />
+      <News heroPost={heroPost} preview={preview} morePosts={morePosts} />
 
       <AboutSection />
       <Reviews />
