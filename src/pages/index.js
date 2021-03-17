@@ -16,7 +16,7 @@ function index({ preview, allPosts }) {
   return (
     <div>
       <Head>
-        <title>Dry John Toilet Bags</title>
+        <title>Dry John Toilet Bags | Clean</title>
         <meta
           name="description"
           content="Dry John Toilet Bags for securing your waste in nature"
