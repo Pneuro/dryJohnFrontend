@@ -25,9 +25,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "dev": "next dev",
-    "start": "next start -p $PORT",
-    "heroku-postbuild": "npm run build"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "eslintConfig": {
     "extends": [
