@@ -25,9 +25,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    
-    "heroku-postbuild": "npm run build",
-    "dev": "next dev",
+    "dev": "next",
+    "build": "next build",
     "start": "next start -p $PORT"
     
   },
