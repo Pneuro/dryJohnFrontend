@@ -25,7 +25,7 @@
   },
   "scripts": {
     
-    "heroku-postbuild": "npm run build",
+    "npm run vercel-build": "npm run build",
     "dev": "next dev",
     "start": "next build && next start"
     
