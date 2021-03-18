@@ -4,7 +4,6 @@
   "private": true,
   "engines": {
     "node": "12.18.3"
-    
   },
   "dependencies": {
     "@prismicio/client": "^4.0.0",
