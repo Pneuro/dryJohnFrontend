@@ -1,10 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import AllPosts from "../components/AllPosts";
-import { useState } from "react";
-import Footer from "../components/Footer";
-
 const backendPage = ({ user, logout }) => {
   const styles = {
     wrapper: {
@@ -16,9 +12,6 @@ const backendPage = ({ user, logout }) => {
       <div style={styles.wrapper}>
         <h1>Welcome, {user}</h1>
         <button onClick={() => logout()}>Logout</button>
-
-        <AllPosts />
-        <Footer />
       </div>
     </>
   );
