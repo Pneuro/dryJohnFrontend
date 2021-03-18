@@ -68,7 +68,6 @@ function Header({ setEmail, email }) {
     link: {
       color: "#fff",
       textDecoration: "none",
-      
     },
     input: {
       height: "25px",
@@ -122,15 +121,17 @@ function Header({ setEmail, email }) {
           </motion.p>
           {!modal ? (
             <form style={styles.form} onSubmit={openModal}>
-              <motion.button
+              {/* <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ y: [40, 0], opacity: [0, 1] }}
-                transition={{ duration: 0.3, delay: 0.6 }}
+                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 type="submit"
                 className="button"
               >
                 Contact Us
-              </motion.button>
+              </motion.button> */}
             </form>
           ) : (
             <Modal setEmail={setEmail} setModal={setModal} />
@@ -139,15 +140,23 @@ function Header({ setEmail, email }) {
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ y: [50, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.3, delay: 0.9 }}
+              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               type="submit"
               className="button"
             >
-              <Link
-                style={styles.link}
-                href="https://www.amazon.com/Portable-Toilet-Bags-Compostable-Absorbent/dp/B078X3TCRG/ref=sr_1_2?crid=2RZVRI2TQJG7P&dchild=1&keywords=dry+john+toilet+bags&qid=1613490708&sprefix=dry+john%2Caps%2C174&sr=8-2"
-              >
-                Order Now
+              <Link href="https://www.amazon.com/Portable-Toilet-Bags-Compostable-Absorbent/dp/B078X3TCRG/ref=sr_1_2?crid=2RZVRI2TQJG7P&dchild=1&keywords=dry+john+toilet+bags&qid=1613490708&sprefix=dry+john%2Caps%2C174&sr=8-2">
+                <motion.p
+                  style={styles.link}
+                  initial={{ opacity: 0 }}
+                  animate={{ y: [40, 0], opacity: [0, 1] }}
+                  transition={{ duration: 0.1 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Order Now
+                </motion.p>
               </Link>
             </motion.button>
           </form>

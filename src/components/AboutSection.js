@@ -111,7 +111,7 @@ function About() {
           <motion.p
             animate={{ y: [40, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            style={{ maxWidth: "100vw", fontSize: "1.5em" }}
+            style={{ maxWidth: "90vw", fontSize: "1.3em" }}
           >
             "I try and live what I say. I want the world to be a less polluted
             place. That’s a tall order. But if more of us do just a little bit
