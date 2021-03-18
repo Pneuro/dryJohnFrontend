@@ -27,7 +27,7 @@
     
     "heroku-postbuild": "npm run build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next build && next start"
     
   },
   "eslintConfig": {
