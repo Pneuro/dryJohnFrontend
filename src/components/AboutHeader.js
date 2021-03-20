@@ -6,7 +6,7 @@ function AboutHeader() {
   const styles = {
     wrapper: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr)",
+      gridTemplateColumns: "repeat(auto-fit, minmax(50vw, 1fr)",
       alignItems: "center",
       justifyContent: "center",
       background: "#DBF0FF",

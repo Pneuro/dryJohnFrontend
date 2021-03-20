@@ -6,7 +6,7 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <div style={{ background: "#8dc84a" }}>
+      <div style={{ background: "#fff" }}>
         <Alert preview={preview} />
         <main>{children}</main>
       </div>

@@ -36,7 +36,12 @@ export default function PostPreview({
         <Date dateString={date} />
       </div>
       <p
-        style={{ fontSize: "21px", leading: "relaxed", marginBottom: "4em" }}
+        style={{
+          color: "#3485bc",
+          fontSize: "21px",
+          leading: "relaxed",
+          marginBottom: "4em",
+        }}
         className="text-lg leading-relaxed mb-4"
       >
         {excerpt}

@@ -17,7 +17,10 @@ function Footer() {
         </ul>
         <ul>
           <h3>Product</h3>
-          <a href="/order" style={styles.item}>
+          <a
+            href="https://www.amazon.com/Portable-Toilet-Bags-Compostable-Absorbent/dp/B078X3TCRG/ref=sr_1_2?crid=2RZVRI2TQJG7P&dchild=1&keywords=dry+john+toilet+bags&qid=1613490708&sprefix=dry+john%2Caps%2C174&sr=8-2"
+            style={styles.item}
+          >
             Order
           </a>
         </ul>
@@ -37,7 +40,12 @@ function Footer() {
         </ul>
         <ul>
           <h3>Administration</h3>
-          <a style={styles.item} href="/admin" exact style={styles.item}>
+          <a
+            style={styles.item}
+            href="https://prismic.io/dashboard"
+            exact
+            style={styles.item}
+          >
             Login
           </a>
         </ul>
@@ -60,7 +68,7 @@ const styles = {
     justifyContent: "center",
     position: "relative",
     zIndex: 1,
-    
+
     border: "#ddd 1px solid",
 
     background:

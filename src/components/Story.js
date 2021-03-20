@@ -1,25 +1,29 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-function Story(props) {
+function Story() {
   const styles = {
     wrapper: {
       margin: "1em auto",
       backgroundColor: "#517a21",
       color: "#fff",
       padding: "1em",
+      margin: "auto",
     },
     container: {
       display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gridTemplateColumns: "repeat(auto-fit, minmax(1fr 1fr, 1fr))",
+      maxWidth: "500px",
       gap: "5em",
+      margin: "auto",
       lineHeight: "1.6",
     },
   };
 
   return (
     <div id="info" style={styles.wrapper}>
-      <h1>The Dry John Story</h1>
+      <h1 style={{ textAlign: "center", padding: "2em" }}>
+        The Dry John Story
+      </h1>
       <div style={styles.container}>
         <p>
           The fact is too many of us are sending our human waste to the ground
@@ -62,7 +66,5 @@ function Story(props) {
     </div>
   );
 }
-
-Story.propTypes = {};
 
 export default Story;

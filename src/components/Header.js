@@ -121,7 +121,7 @@ function Header({ setEmail, email }) {
           </motion.p>
           {!modal ? (
             <form style={styles.form} onSubmit={openModal}>
-              {/* <motion.button
+              <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ y: [40, 0], opacity: [0, 1] }}
                 transition={{ duration: 0.3 }}
@@ -131,7 +131,7 @@ function Header({ setEmail, email }) {
                 className="button"
               >
                 Contact Us
-              </motion.button> */}
+              </motion.button>
             </form>
           ) : (
             <Modal setEmail={setEmail} setModal={setModal} />

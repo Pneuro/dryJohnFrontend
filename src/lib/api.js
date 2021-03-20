@@ -107,7 +107,7 @@ export async function getPostAndMorePosts(slug, previewData) {
       }
     }
 
-   morePosts: allPosts(sortBy: date_DESC, first: 3) {
+   morePosts: allPosts(sortBy: date_DESC, first: 50) {
       edges {
         node {
           title
@@ -140,7 +140,7 @@ export async function getPostAndMorePosts(slug, previewData) {
 
   data.morePosts = data.morePosts.edges
     .filter(({ node }) => node._meta.uid !== slug)
-    .slice(0, 2);
+    .slice(0, 10);
 
   return data;
 }
