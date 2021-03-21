@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "../components/Nav";
-import Image from "next/image";
 import ImageGallery from "react-image-gallery";
 
 import Footer from "../components/Footer";
@@ -12,8 +11,7 @@ function productPage() {
   const trashbucket = "/Assets/Images/SlideshowImages/TrashBucket.jpg";
   const imageThree = "/Assets/Images/SlideshowImages/imageThree.jpg";
   const imageThreeThumb = "/Assets/Images/SlideshowImages/imageThreeThumb.png";
-  const imageFour = "/Assets/Images/SlideshowImages/imageFour.jpg";
-  const imageFourThumb = "/Assets/Images/SlideshowImages/imageFourThumb.png";
+
   const imageFive = "/Assets/Images/SlideshowImages/imageFive.jpg";
   const imageFiveThumb = "/Assets/Images/SlideshowImages/imageFiveThumb.png";
 
@@ -21,29 +19,29 @@ function productPage() {
     {
       original: tied,
       thumbnail: tied,
-      description: "1 The easiest way to transport human waste out of nature.",
+      description: "1/5",
     },
     {
       original: topDown,
       thumbnail: topDown,
-      description: "2 The easiest way to transport human waste out of nature.",
+      description: "2/5",
     },
     {
       original: trashbucket,
       thumbnail: trashbucket,
-      description: "3 The easiest way to transport human waste out of nature.",
+      description: "3/5",
     },
 
     {
       original: imageThree,
       thumbnail: imageThreeThumb,
-      description: "4 Easy",
+      description: "4/5",
     },
-    
+
     {
       original: imageFive,
       thumbnail: imageFiveThumb,
-      description: "5 The easiest way to transport human waste out of nature.",
+      description: "5/5",
     },
   ];
 
