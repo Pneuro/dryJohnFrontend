@@ -7,7 +7,7 @@ export default function Avatar({ name, picture }) {
         alt={name[0].text}
         style={{ width: "100px", borderRadius: "5px" }}
       />
-      <div className="text-xl font-bold">{name}</div>
+      <div className="text-xl font-bold">by: {name}</div>
     </div>
   );
 }

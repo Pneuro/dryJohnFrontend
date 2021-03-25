@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default async function exit(_, res) {\n  // Exit the current user from \"Preview Mode\". This function accepts no args.\n  res.clearPreviewData(); // Redirect the user back to the index page.\n\n  res.writeHead(307, {\n    Location: \"/\"\n  });\n  res.end();\n}","map":null,"metadata":{},"sourceType":"module"}

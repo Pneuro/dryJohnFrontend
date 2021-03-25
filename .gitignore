@@ -25,4 +25,4 @@ yarn-error.log*
 ./src/prismic-configuration.js
 ./src/components/Assets
 
-.next
+.nextsendgrid.env

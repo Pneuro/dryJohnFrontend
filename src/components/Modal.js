@@ -15,7 +15,7 @@ function Modal({ setModal }) {
   const data = [name, email, phone, message];
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://dry-john-backend.herokuapp.com/contact", headers).then(
+    fetch("/api/contact", headers).then(
       (res) =>
         res
           .json()
@@ -58,7 +58,7 @@ function Modal({ setModal }) {
       border: ".5px black solid",
       borderRadius: "5px",
       width: "350px",
-      marginTop: "10px;",
+      marginTop: "10px",
     },
     inputCheck: {
       height: "25px",
@@ -66,7 +66,7 @@ function Modal({ setModal }) {
       borderRadius: "5px",
       display: "flex",
 
-      marginTop: "10px;",
+      marginTop: "10px",
     },
     form: {
       display: "flex",
@@ -142,3 +142,4 @@ function Modal({ setModal }) {
 }
 
 export default Modal;
+
