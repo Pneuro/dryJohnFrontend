@@ -22,7 +22,7 @@ export default function handlebar(req, res) {
     // send mail with defined transport object
     let info = await transporter.sendMail({
       from: `${req.body[1]}`, // sender address
-      to: "thedylankendrick@gmail.com", // list of receivers
+      to: process.env.MAIL_USER, // list of receivers
       subject: `Message from dry-john.com - ${req.body[0]}`, // Subject line
       text: `Hello from ${req.body[0]}, \n \n ${req.body[3]}\n \n Phone number ${req.body[2]}\n\n Email: ${req.body[1]}`, // plain text body
       html: `<h1>Hello from ${req.body[0]}</h1> \n \n <p>${req.body[3]}</p>\n \n <p>
