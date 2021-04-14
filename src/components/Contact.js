@@ -33,7 +33,7 @@ function Contact() {
       padding: "5em",
       display: "flex",
       flexDirection: "column",
-      alignItems: "center"
+      alignItems: "center",
     },
     form: {
       display: "flex",
@@ -101,7 +101,7 @@ function Contact() {
             </form>
           </div>
         ) : (
-          "We look forward to reading your message!"
+          "Thanks!"
         )}
       </div>
     </div>

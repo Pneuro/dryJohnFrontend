@@ -9,11 +9,11 @@ function AboutHeader() {
       gridTemplateColumns: "repeat(auto-fit, minmax(50vw, 1fr)",
       alignItems: "center",
       justifyContent: "center",
-      background: "#DBF0FF",
+      background: "#7dcdd6",
       padding: "100px 0",
     },
     greeting: {
-      maxWidth: "35vw",
+      maxWidth: "500px",
       minWidth: "300px",
       margin: "auto",
       padding: "1em",

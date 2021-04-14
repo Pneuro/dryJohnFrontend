@@ -14,7 +14,7 @@ function OfferingHand() {
         xmlns="http://www.w3.org/2000/svg"
         width="886"
         style={styles.hand}
-        height="654.301"
+        height="400.301"
         viewBox="0 0 886 654.301"
       >
         <path

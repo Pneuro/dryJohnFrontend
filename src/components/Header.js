@@ -108,7 +108,8 @@ function Header({ setEmail, email }) {
             transition={{ duration: 0.3, delay: 0 }}
             style={styles.h1}
           >
-            We only get one planet, Let's treat her with respect.
+            We only get one planet.
+            <br /> Let's treat her with respect.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}

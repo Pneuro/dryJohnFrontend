@@ -14,42 +14,49 @@ function productPage() {
 
   const imageFive = "/Assets/Images/SlideshowImages/imageFive.jpg";
   const imageFiveThumb = "/Assets/Images/SlideshowImages/imageFiveThumb.png";
+  const label = "/Assets/Images/productlabel_600w.jpg";
 
   const images = [
     {
+      original: label,
+      thumbnail: label,
+      description: "1/6",
+    },
+    {
       original: tied,
       thumbnail: tied,
-      description: "1/5",
+      description: "2/6",
     },
     {
       original: topDown,
       thumbnail: topDown,
-      description: "2/5",
+      description: "3/6",
     },
     {
       original: trashbucket,
       thumbnail: trashbucket,
-      description: "3/5",
+      description: "4/6",
     },
 
     {
       original: imageThree,
       thumbnail: imageThreeThumb,
-      description: "4/5",
+      description: "5/6",
     },
 
     {
       original: imageFive,
       thumbnail: imageFiveThumb,
-      description: "5/5",
+      description: "6/6",
     },
   ];
 
   return (
     <>
       <Nav />
-
-      <HowTo />
+      <h1 style={{ textAlign: "center", padding: "1em", color: "#fff" }}>
+        Product Images
+      </h1>
       <ImageGallery items={images} />
       <Footer />
     </>
