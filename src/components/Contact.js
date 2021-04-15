@@ -1,26 +1,35 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+import "dotenv";
 function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
   const onEmailChange = (e) => setEmail(e.target.value);
   const onMessageChange = (e) => setMessage(e.target.value);
+  function handleSubmit(e) {
+    const MAIL_USER = process.env.MAIL_USER;
+    const MAIL_TEMPLATE_ID = process.env.MAIL_TEMPLATE_ID;
+    const MAIL_SERVICE_ID = process.env.MAIL_SERVICE_ID;
+    const MAIL_ACCESS_TOKEN = process.env.MAIL_ACCESS_TOKEN;
 
-  const handleSubmit = (e) => {
+    init(MAIL_USER);
     e.preventDefault();
-    const data = [email, message];
-    const header = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    };
-    setSent(true);
-    fetch("/contact", header)
-      .then((response) => response.json())
-      .catch((err) => console.error(err.message));
-  };
 
+    emailjs
+      .sendForm(MAIL_SERVICE_ID, MAIL_TEMPLATE_ID, e.target, MAIL_USER)
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
   const styles = {
     wrapper: {
       backgroundColor: "#3485BC",
@@ -85,14 +94,13 @@ function Contact() {
                 placeholder="Message"
                 onChange={onMessageChange}
                 type="text"
-                name="projectType"
+                name="message"
                 value={message}
                 style={styles.inputBottom}
               />
 
               <motion.button
                 whileHover={{ scale: 1.1 }}
-                onClick={handleSubmit}
                 type="submit"
                 style={styles.button}
               >

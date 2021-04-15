@@ -1,6 +1,14 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
 
-function Modal({ setModal }) {
+const MAIL_USER = process.env.MAIL_USER;
+const MAIL_TEMPLATE_ID = process.env.MAIL_TEMPLATE_ID;
+const MAIL_SERVICE_ID = process.env.MAIL_SERVICE_ID;
+const MAIL_ACCESS_TOKEN = process.env.MAIL_ACCESS_TOKEN;
+init(MAIL_USER);
+console.log(process.env);
+export default function Modal({ setModal }) {
   const [contactSent, setContactSent] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,26 +20,44 @@ function Modal({ setModal }) {
   const onMessageChange = (e) => setMessage(e.target.value);
 
   // Send POST request to backend to add data to database
-  const data = [name, email, phone, message];
-  const handleSubmit = (e) => {
+  // const data = [name, email, phone, message];
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   fetch("/api/contact", headers).then(
+  //     (res) =>
+  //       res
+  //         .json()
+  //         .then((res) => console.log(res))
+  //         .catch((err) => console.error(err))
+  //   );
+
+  //   setContactSent(true);
+  //   setModal(false);
+  // };
+  // const headers = {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify(data),
+  // };
+  console.log("Event");
+  function handleSubmit(e) {
     e.preventDefault();
-    fetch("/api/contact", headers).then(
-      (res) =>
-        res
-          .json()
-          .then((res) => console.log(res))
-          .catch((err) => console.error(err))
-    );
-
-    setContactSent(true);
-    setModal(false);
-  };
-  const headers = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  };
-
+    emailjs
+      .sendForm(
+        "service_d75tve8",
+        "dry_john",
+        e.target,
+        "user_rDK5kppEAA50sEtArxyPx"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  }
   const styles = {
     wrapper: {
       position: "absolute",
@@ -110,11 +136,13 @@ function Modal({ setModal }) {
               style={styles.input}
               placeholder="Name"
               type="text"
+              name="name"
               onChange={onNameChange}
             />
             <input
               style={styles.input}
               placeholder="Email Address"
+              name="email"
               type="email"
               onChange={onEmailChange}
             />
@@ -122,10 +150,12 @@ function Modal({ setModal }) {
               style={styles.input}
               placeholder="Phone Number"
               type="text"
+              name="phone_number"
               onChange={onPhoneChange}
             />
             <input
               style={styles.input}
+              name="message"
               placeholder="Message"
               type="textarea"
               onChange={onMessageChange}
@@ -140,6 +170,3 @@ function Modal({ setModal }) {
     </div>
   );
 }
-
-export default Modal;
-

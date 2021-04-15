@@ -12,6 +12,8 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "date-fns": "^2.19.0",
+    "emailjs": "^3.4.0",
+    "emailjs-com": "^2.6.4",
     "framer-motion": "^3.3.0-beta.22",
     "next": "^10.0.8",
     "nodemailer": "^6.5.0",
