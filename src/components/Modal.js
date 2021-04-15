@@ -39,7 +39,7 @@ export default function Modal({ setModal }) {
   //   headers: { "Content-Type": "application/json" },
   //   body: JSON.stringify(data),
   // };
-  console.log("Event");
+  
   function handleSubmit(e) {
     e.preventDefault();
     emailjs
@@ -57,6 +57,7 @@ export default function Modal({ setModal }) {
           console.log(error.text);
         }
       );
+    e.target.reset();
   }
   const styles = {
     wrapper: {

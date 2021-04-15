@@ -1,14 +1,6 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.html",
-  "/admin": "pages/admin.html",
-  "/api/contact": "pages/api/contact.js",
-  "/api/exit-preview": "pages/api/exit-preview.js",
-  "/api/preview": "pages/api/preview.js",
-  "/": "pages/index.js",
-  "/posts/[slug]": "pages/posts/[slug].js",
-  "/product": "pages/product.html",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }
