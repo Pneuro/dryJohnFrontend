@@ -36,18 +36,18 @@ function Story() {
         <p>
           Some steering along the way of development came from a water quality
           and sewage treatment expert who determined that our waste should not
-          be scattered on land or in water - it's better off contained ina bag
+          be scattered on land or in water - it's better off contained in a bag
           that will breakdown at the lined landfill.
         </p>
 
         <p>
           Years later, now, it gives me a great feeling to know that each Dry
-          John toilet ag used is cancelling out the human waste that would
+          John toilet bag used is cancelling out the human waste that would
           otherwise be left on the ground or in the water.
         </p>
 
         <p>
-          I could write forever about the ebenfits of using Dry John but I'll
+          I could write forever about the benfits of using Dry John but I'll
           try to spare you ... like the statistic that there are about 40
           million households in the US who still use well water.
         </p>

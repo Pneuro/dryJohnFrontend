@@ -39,7 +39,7 @@ export default function Modal({ setModal }) {
   //   headers: { "Content-Type": "application/json" },
   //   body: JSON.stringify(data),
   // };
-  
+
   function handleSubmit(e) {
     e.preventDefault();
     emailjs
