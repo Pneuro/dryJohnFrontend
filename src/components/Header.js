@@ -26,7 +26,6 @@ function Header({ setEmail, email }) {
     if (!modal) {
       setModal(true);
     } else {
-      console.log(modal);
       setModal(false);
     }
   }
@@ -131,7 +130,9 @@ function Header({ setEmail, email }) {
                 type="submit"
                 className="button"
               >
-                Contact Us
+                <Link href="mailto:petephinney@gmail.com">
+                  <p>Contact Us</p>
+                </Link>
               </motion.button>
             </form>
           ) : (

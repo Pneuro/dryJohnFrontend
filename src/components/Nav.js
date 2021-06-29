@@ -9,10 +9,10 @@ function Nav() {
   const navLogo = "/Assets/Images/nav_logo.png";
   useEffect(() => {
     if (window.innerWidth < 500) {
-      console.log(window.innerWidth);
+      
       setMobile(true);
 
-      console.log(`Set mobile? ${mobile}`);
+      
     } else {
       setMobile(false);
     }

@@ -52,6 +52,7 @@ export default function Modal({ setModal }) {
       .then(
         (result) => {
           console.log(result.text);
+          setContactSent(true);
         },
         (error) => {
           console.log(error.text);
@@ -162,7 +163,9 @@ export default function Modal({ setModal }) {
               onChange={onMessageChange}
             />
 
-            <button type="submit">Submit</button>
+            <button style={styles.input} type="submit">
+              Submit
+            </button>
           </form>
         ) : (
           <p>We will contact you as soon as possible!</p>
